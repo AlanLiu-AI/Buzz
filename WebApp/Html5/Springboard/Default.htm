@@ -5,57 +5,96 @@
 <!--jQuery References-->
 <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
-<!--Theme-->
-<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" 
-rel="stylesheet" type="text/css" title="rocket-jqueryui" />
-<!--Wijmo Widgets CSS-->
-<link href="http://cdn.wijmo.com/jquery.wijmo-complete.all.2.3.2.min.css" 
-rel="stylesheet" type="text/css" />
 <!--Wijmo Widgets JavaScript-->
 <script src="http://cdn.wijmo.com/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>
 <script src="http://cdn.wijmo.com/jquery.wijmo-complete.all.2.3.2.min.js" type="text/javascript"></script>
+<!--Theme-->
+<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" title="rocket-jqueryui" />
+<!--Wijmo Widgets CSS-->
+<link href="http://cdn.wijmo.com/jquery.wijmo-complete.all.2.3.2.min.css" rel="stylesheet" type="text/css" />
 <script id="scriptInit" type="text/javascript">
-$(document).ready(function() {
+$(document).ready(function() {	
     $("#tree").wijtree();
     $("#vsplitter").wijsplitter({
-    panel1: { minSize: 50 }, 
-    splitterDistance: 250,
-    orientation: "vertical", 
-    fullSplit: false, 
-    expanded: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
-    collapsed: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
-    sized: function (e) {$("#hsplitter").wijsplitter("refresh");} 
+		panel1: { minSize: 100, scrollBars: "auto", collapsed:false }, 
+		panel2: { collapsed:false }, 
+		splitterDistance: 220,
+		orientation: "vertical", 
+		fullSplit: false, 
+		expanded: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
+		collapsed: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
+		sized: function (e) {$("#hsplitter").wijsplitter("refresh");} 
     });
     $("#hsplitter").wijsplitter({
-    splitterDistance: 300,
-    fullSplit: true,
-    orientation: "horizental",
-    panel1: { scrollBars: "auto" },
-    panel2: { scrollBars: "auto" }
+		splitterDistance: 290,
+		fullSplit: true,
+		orientation: "horizental"
     });
-    $("#LocationMenu").wijmenu();
-    $("#DataSetMenu").wijmenu();
-    $("#LocationGrid").wijgrid({allowSorting: true, allowColMoving: true });
-    $("#DataSetGrid").wijgrid({allowSorting: true, allowColMoving: true });
+    $("#Menu").wijmenu();
+    $("#LocationGrid").wijgrid({allowSorting: true, allowColMoving: true, allowPaging: true });
+    $("#DataSetGrid").wijgrid({allowSorting: true, allowColMoving: true, allowPaging: true, pageSize: 20});	
 });   
 </script>
 <style type="text/css">
     .folder { font-family:"Trebuchet MS"; font-size:12px }
     .treeText .tlbText { color: #fafafa; font-family:"Trebuchet MS";  font-size:12px }
-    .tlbLeft { float: left; width: 30%; font-family:"Trebuchet MS"; font-size:16px }
-    .tlbRight  { margin-right: 1px; font-family:"Trebuchet MS"; font-size:16px }
     td  {font-family:"Trebuchet MS";  font-size:12px }
-    th  {font-family:"Trebuchet MS";  font-size:16px }
-    .wijmo-wijmenu { margin-bottom: 1px; } 
+    th  {font-family:"Trebuchet MS";  font-size:12px }
+	#vsplitter { height:810px }
+	.title { }
+	.titleText { font-family:"Trebuchet MS"; font-size:20px }
+    .menuItem  { display: inline-block; white-space: nowrap; font-family:"Trebuchet MS"; font-size:12px }
+	input[type="button"] {
+		background-image:-webkit-linear-gradient(top, #00A4DB 0%, #0190BF 100%);
+		background-position:initial initial;
+		background-repeat:initial initial;
+		border-bottom-left-radius:4px;
+		border-bottom-right-radius:4px;
+		border-color:#00749B;
+		border-style:solid;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		border-width:1px 1px 1px;
+		color:#E8EAED;
+		cursor:pointer;
+		display:inline-block;
+		font-family:Georgia, 'Times New Roman', Times, serif;
+		font-size:12px;
+		font-style:italic;
+		margin-bottom:0.4em;
+		padding:0.4em 1em;
+		text-align:center;
+		text-shadow:rgba(0, 0, 0, 0.247059) 1px 1px 1px;
+		float: left;
+		line-height:16px;
+	}
+}
 </style>
 </head>
 <body >
 <div >
     <div id="Head">
-        <h2>Light-weight Springboard</h2>
+		<ul id="Menu">
+			<li class="title"><span class="titleText">Light-weight Springboard</span></li>
+			<li class="menuItem"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">AppendLogger</span></a></li> 
+			<li class="menuItem"><a><span class="ui-icon ui-icon-person wijmo-wijmenu-icon-left"></span><span class="tlbText">FieldVisit</span></a></li> 
+			<li class="menuItem"><a><span class="ui-icon ui-icon-arrowthick-1-w wijmo-wijmenu-icon-left"></span><span class="tlbText">QuickView</span></a></li> 
+			<li class="menuItem"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">DataCorrection</span></a></li> 
+			<li class="menuItem"><a><span class="ui-icon ui-icon-comment wijmo-wijmenu-icon-left"></span><span class="tlbText">RatingDevelopment</span></a></li> 			
+			<li class="menuItem"><a><span class="ui-icon ui-icon-bookmark wijmo-wijmenu-icon-left"></span><span class="tlbText">Report</span></a>
+				<ul>
+					<li><a>Report1</a></li>
+					<li><a>Report2</a></li>
+					<li><a>Report3</a></li>
+					<li><a>Report4</a></li>
+					<li><a>Report5</a></li>
+					<li><a>Report6</a></li>
+				</ul>
+			</li>
+			<li class="menuItem"><input id="searchInput" type="text" style="width:120px" /><input type="button" value="Search" onclick="setSearchHistory()" /></li>
+		</ul> 
     </div>
     <div id="content">
-        <!-- Begin demo markup -->
         <div id="vsplitter">
             <div id="LocationFolderView">
                 <ul id="tree"> 
@@ -98,68 +137,82 @@ $(document).ready(function() {
             </div>
             <div id="hsplitter">
                 <div id="LocationView">
-                    <ul id="LocationMenu">
-                        <li class="tlbLeft"><span class="tlbText">Locations</span></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">AppendLogger</span></a></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-person wijmo-wijmenu-icon-left"></span><span class="tlbText">FieldVisit</span></a></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-bookmark wijmo-wijmenu-icon-left"></span><span class="tlbText">Report</span></a> 
-                            <ul> 
-                                <li><a>Report1</a></li> 
-                                <li><a>Report2</a></li> 
-                                <li><a>Report3</a></li>
-                            </ul> 
-                        </li> 
-                    </ul> 
-                    <div>
-                        <table id="LocationGrid"> 
-                            <thead> 
+					<table id="LocationGrid"> 
+						<thead> 
 <tr><th>Location Identifier</th><th>Location Name</th><th>Location Type</th><th>Folder</th></tr> 
-                            </thead> 
-                            <tbody> 
-<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr> 
-<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr> 
-<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr> 
-<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr> 
-<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr> 
-                            </tbody> 
-                        </table> 
-                    </div>
+						</thead> 
+						<tbody> 
+<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest001</td><td>Append Logger 001</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest002</td><td>Append Logger 002</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest003</td><td>Append Logger 003</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest004</td><td>Append Logger 004</td><td>Hydrology Station</td><td>All Locations</td></tr>
+<tr><td>ALTest005</td><td>Append Logger 005</td><td>Hydrology Station</td><td>All Locations</td></tr>
+						</tbody> 
+					</table> 
                 </div>
                 <div id="DataSetView">
-                    <ul id="DataSetMenu">
-                        <li class="tlbLeft"><span class="tlbText">Data Sets</span></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-arrowthick-1-w wijmo-wijmenu-icon-left"></span><span class="tlbText">QuickView</span></a></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">DataCorrection</span></a></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-comment wijmo-wijmenu-icon-left"></span><span class="tlbText">RatingDevelopment</span></a></li> 
-                        <li class="tlbRight"><a><span class="ui-icon ui-icon-bookmark wijmo-wijmenu-icon-left"></span><span class="tlbText">Report</span></a> 
-                            <ul> 
-                                <li><a>Report1</a></li> 
-                                <li><a>Report2</a></li> 
-                                <li><a>Report3</a></li>
-                            </ul> 
-                        </li> 
-                    </ul> 
-                    <div>
-                        <table id="DataSetGrid"> 
-                            <thead> 
+					<table id="DataSetGrid"> 
+						<thead> 
 <tr> <th>Dataset Id</th><th>Description</th><th>First Measurement</th><th>Last Measurement</th></tr> 
-                            </thead> 
-                            <tbody> 
-<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr> 
-<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr> 
-<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr> 
-<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr> 
+						</thead> 
+						<tbody> 
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
 <tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
-                            </tbody> 
-                        </table> 
-                    </div>
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Stage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Discharge.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Voltage.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Water Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+<tr><td>Air Temp.Logger@AQTest</td><td>e</td><td>11/15/2007 6:45 AM</td><td>12/31/2007 11:45 PM</td></tr>
+						</tbody> 
+					</table> 
                 </div>
             </div>
         </div>
     </div>
     <div id="bottom">
-        <p>
-            Note: Light-weight Springboard is just for IVAlpha feature development! 
-        </p>    </div></div>
+        <p id="Status">Note: Light-weight Springboard is just for IVAlpha feature development, this example use static data.</p>     </div></div>
 </body>
 </html>

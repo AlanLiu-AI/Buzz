@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>Light-weight Springboard (Embrace Html5)</title>
+<!--jQuery References-->
+<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+<!--Theme-->
+<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" 
+rel="stylesheet" type="text/css" title="rocket-jqueryui" />
+<!--Wijmo Widgets CSS-->
+<link href="http://cdn.wijmo.com/jquery.wijmo-complete.all.2.3.2.min.css" 
+rel="stylesheet" type="text/css" />
+<!--Wijmo Widgets JavaScript-->
+<script src="http://cdn.wijmo.com/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>
+<script src="http://cdn.wijmo.com/jquery.wijmo-complete.all.2.3.2.min.js" type="text/javascript"></script>
+<script id="scriptInit" type="text/javascript">
+$(document).ready(function() {
+    $("#tree").wijtree();
+   $("#vsplitter").wijsplitter({
+		panel1: { minSize: 100, scrollBars: "auto", collapsed:false }, 
+		panel2: { collapsed:false }, 
+		splitterDistance: 220,
+		orientation: "vertical", 
+		fullSplit: false, 
+		expanded: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
+		collapsed: function (e) {$("#hsplitter").wijsplitter("refresh");}, 
+		sized: function (e) {$("#hsplitter").wijsplitter("refresh");} 
+    });
+    $("#hsplitter").wijsplitter({
+		splitterDistance: 290,
+		fullSplit: true,
+		orientation: "horizental"
+    });
+    $("#Menu").wijmenu();
+	$("#LocationGrid").wijgrid({
+		allowSorting: true, 
+		allowColMoving: true,
+		allowColSizing: true,
+		scrollMode: "auto",
+		loadingText: "Locations is Loading...",
+		allowPaging: true, 
+		pageIndex: 0,
+		pageSize: 10,
+		pagerSettings: { position: "bottom" },
+		columns: [ 
+			{ headerText: "LocationId", visible: false }, 
+			{ headerText: "Location Identifier", allowSort: true }, 
+			{ headerText: "Location Name" },
+			{ headerText: "Location Type" },
+			{ headerText: "Location Folder" }
+			],
+		data: [[0, "", "", "", ""]]
+	});
+	$.ajax({
+		url: "Data/Location.txt",
+		type: "GET",
+		dataType: "json",
+		beforeSend: function() {},
+		success: function(jsonData, textStatus, xhr) {
+			var $obj = $('#LocationGrid');
+			var data = $obj.wijgrid('data')
+			// empty old data
+            data.splice(0, data.length);
+			// add new items to underlying data array?
+			$.each(jsonData, function (i, item) {
+				data.push([item[0], item[1], item[2], item[3], item[4]]);
+			});
+			// force the wijgrid to re-read the data and re-render the content
+            $obj.wijgrid("ensureControl", true);
+		},
+		error: function(xhr, textStatus, errorThrown) {
+			alert(textStatus + ':' + errorThrown );
+		}
+	});	
+	$("#DataSetGrid").wijgrid({
+		allowSorting: true, 
+		allowColMoving: true,
+		allowColSizing: true,
+		scrollMode: "auto",
+		loadingText: "DateSet is Loading...",
+		allowPaging: true, 
+		pageIndex: 0,
+		pageSize: 20,
+		pagerSettings: { position: "bottom" },
+		columns: [ 
+			{ headerText: "AtomType", visible: false }, 		
+			{ headerText: "AqDataId", visible: false }, 
+			{ headerText: "LocationId", visible: false }, 
+			{ headerText: "DataId", visible: false }, 
+			{ headerText: "Dataset Identifier", allowSort: true, width: "18%" }, 
+			{ headerText: "Description", allowSort: true, width: "24%" },
+			{ headerText: "Last Modified", allowSort: true, width: "16%" },
+			{ headerText: "First Measurement", allowSort: true, width: "16%" },
+			{ headerText: "Last Measurement", allowSort: true, width: "16%" }
+			],
+		data: [["", 0, 0, "", "", "", "", "", ""]]
+	});
+	$.ajax({
+		url: "Data/DataSet.txt",
+		type: "GET",
+		dataType: "json",
+		beforeSend: function() {},
+		success: function(jsonData, textStatus, xhr) {
+			var $obj = $('#DataSetGrid');
+			var data = $obj.wijgrid('data')
+			// empty old data
+            data.splice(0, data.length);
+			// add new items to underlying data array?
+			$.each(jsonData, function (i, item) {
+				data.push([item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8]]);
+			});
+			// force the wijgrid to re-read the data and re-render the content
+            $obj.wijgrid("ensureControl", true);
+		},
+		error: function(xhr, textStatus, errorThrown) {
+			alert(textStatus + ':' + errorThrown );
+		}
+	});
+});
+</script>
+<style type="text/css">
+    .folder { font-family:"Trebuchet MS"; font-size:12px }
+    .treeText .tlbText { color: #fafafa; font-family:"Trebuchet MS";  font-size:12px }
+    td  {font-family:"Trebuchet MS";  font-size:12px }
+    th  {font-family:"Trebuchet MS";  font-size:12px }
+	#vsplitter { height:810px }
+	.title { }
+	.titleText { font-family:"Trebuchet MS"; font-size:20px }
+    .menuItem  { display: inline-block; white-space: nowrap; font-family:"Trebuchet MS"; font-size:12px }
+</style>
+</head>
+<body>
+<div >
+     <div id="Head">
+		<ul id="Menu">
+			<li class="tlbLeft"><span class="title">Light-weight Springboard</span></li>
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">AppendLogger</span></a></li> 
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-person wijmo-wijmenu-icon-left"></span><span class="tlbText">FieldVisit</span></a></li> 
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-arrowthick-1-w wijmo-wijmenu-icon-left"></span><span class="tlbText">QuickView</span></a></li> 
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-arrowrefresh-1-s wijmo-wijmenu-icon-left"></span><span class="tlbText">DataCorrection</span></a></li> 
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-comment wijmo-wijmenu-icon-left"></span><span class="tlbText">RatingDevelopment</span></a></li> 			
+			<li class="tlbRight"><a><span class="ui-icon ui-icon-bookmark wijmo-wijmenu-icon-left"></span><span class="tlbText">Report</span></a>
+				<ul>
+					<li><a>Report1</a></li>
+					<li><a>Report2</a></li>
+					<li><a>Report3</a></li>
+					<li><a>Report4</a></li>
+					<li><a>Report5</a></li>
+					<li><a>Report6</a></li>
+				</ul>
+			</li>
+		</ul> 
+    </div>
+    <div id="content">
+        <div id="vsplitter">
+            <div id="LocationFolderView"></div>
+            <div id="hsplitter">
+                <div id="LocationView">                   
+					<table id="LocationGrid"></table>
+                </div>
+                <div id="DataSetView">     
+					<table id="DataSetGrid"/></table> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+		<p id="Status">Note: Light-weight Springboard is just for IVAlpha feature development, this example use dynamic ajax json data</p>
+    </div>
+</div>
+</body>
+</html>
