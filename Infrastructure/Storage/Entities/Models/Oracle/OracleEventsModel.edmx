@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OracleEventsModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="OracleEventsModelStoreContainer">
+          <EntitySet Name="EVENTACTIONMAPPING" EntityType="OracleEventsModel.Store.EVENTACTIONMAPPING" store:Type="Tables" Schema="AQTEST" />
+          <EntitySet Name="EVENTPROCESSTEMPLATE" EntityType="OracleEventsModel.Store.EVENTPROCESSTEMPLATE" store:Type="Tables" Schema="AQTEST" />
+        </EntityContainer>
+        <EntityType Name="EVENTACTIONMAPPING">
+          <Key>
+            <PropertyRef Name="EVENTACTIONMAPPINGID" />
+          </Key>
+          <Property Name="EVENTACTIONMAPPINGID" Type="number" Nullable="false" Precision="18" />
+          <Property Name="EVENTPROCESSTEMPLATEID" Type="number" Precision="18" />
+          <Property Name="EVENTID" Type="nvarchar2" Nullable="false" MaxLength="255" />
+          <Property Name="TRIGGERID" Type="nvarchar2" MaxLength="255" />
+          <Property Name="SOURCEID" Type="number" Precision="18" />
+          <Property Name="SOURCETYPE" Type="varchar2" Nullable="false" MaxLength="255" />
+          <Property Name="PARAMETERTYPE" Type="varchar2" MaxLength="255" />
+          <Property Name="USERSETUPPARAMVALUES" Type="clob" />
+          <Property Name="STATUS" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="TARGETID" Type="number" Precision="18" />
+          <Property Name="MODELID" Type="number" Precision="18" />
+          <Property Name="LASTMODIFIED" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EVENTPROCESSTEMPLATE">
+          <Key>
+            <PropertyRef Name="EVENTPROCESSTEMPLATEID" />
+          </Key>
+          <Property Name="EVENTPROCESSTEMPLATEID" Type="number" Nullable="false" Precision="18" />
+          <Property Name="TEMPLATENAME" Type="varchar2" MaxLength="255" />
+          <Property Name="OPTIONALLEVEL" Type="number" />
+          <Property Name="LASTMODIFIED" Type="timestamp" Nullable="false" />
+          <Property Name="STATUS" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="PROCESSTEMPLATE" Type="clob" />
+          <Property Name="DESCRIPTION" Type="varchar2" MaxLength="1024" />
+          <Property Name="INITPARAMS" Type="clob" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OracleEventsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="OracleEventsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EVENTACTIONMAPPINGs" EntityType="OracleEventsModel.EVENTACTIONMAPPING" />
+          <EntitySet Name="EVENTPROCESSTEMPLATEs" EntityType="OracleEventsModel.EVENTPROCESSTEMPLATE" />
+        </EntityContainer>
+        <EntityType Name="EVENTACTIONMAPPING">
+          <Key>
+            <PropertyRef Name="EVENTACTIONMAPPINGID" />
+          </Key>
+          <Property Name="EVENTACTIONMAPPINGID" Type="Int64" Nullable="false" />
+          <Property Name="EVENTPROCESSTEMPLATEID" Type="Int64" />
+          <Property Name="EVENTID" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="TRIGGERID" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SOURCEID" Type="Int64" />
+          <Property Name="SOURCETYPE" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="PARAMETERTYPE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="USERSETUPPARAMVALUES" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="STATUS" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="TARGETID" Type="Int64" />
+          <Property Name="MODELID" Type="Int64" />
+          <Property Type="DateTime" Name="LASTMODIFIED" Nullable="false" Precision="6" />
+        </EntityType>
+        <EntityType Name="EVENTPROCESSTEMPLATE">
+          <Key>
+            <PropertyRef Name="EVENTPROCESSTEMPLATEID" />
+          </Key>
+          <Property Name="EVENTPROCESSTEMPLATEID" Type="Int64" Nullable="false" />
+          <Property Name="TEMPLATENAME" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="OPTIONALLEVEL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="LASTMODIFIED" Type="DateTime" Nullable="false" Precision="6" />
+          <Property Name="STATUS" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="PROCESSTEMPLATE" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="1024" Unicode="false" FixedLength="false" />
+          <Property Name="INITPARAMS" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OracleEventsModelStoreContainer" CdmEntityContainer="OracleEventsEntities">
+          <EntitySetMapping Name="EVENTACTIONMAPPINGs"><EntityTypeMapping TypeName="OracleEventsModel.EVENTACTIONMAPPING"><MappingFragment StoreEntitySet="EVENTACTIONMAPPING">
+                <ScalarProperty Name="LASTMODIFIED" ColumnName="LASTMODIFIED" />
+                <ScalarProperty Name="EVENTACTIONMAPPINGID" ColumnName="EVENTACTIONMAPPINGID" />
+            <ScalarProperty Name="EVENTPROCESSTEMPLATEID" ColumnName="EVENTPROCESSTEMPLATEID" />
+            <ScalarProperty Name="EVENTID" ColumnName="EVENTID" />
+            <ScalarProperty Name="TRIGGERID" ColumnName="TRIGGERID" />
+            <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+            <ScalarProperty Name="SOURCETYPE" ColumnName="SOURCETYPE" />
+            <ScalarProperty Name="PARAMETERTYPE" ColumnName="PARAMETERTYPE" />
+            <ScalarProperty Name="USERSETUPPARAMVALUES" ColumnName="USERSETUPPARAMVALUES" />
+            <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+            <ScalarProperty Name="TARGETID" ColumnName="TARGETID" />
+            <ScalarProperty Name="MODELID" ColumnName="MODELID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EVENTPROCESSTEMPLATEs"><EntityTypeMapping TypeName="OracleEventsModel.EVENTPROCESSTEMPLATE"><MappingFragment StoreEntitySet="EVENTPROCESSTEMPLATE">
+            <ScalarProperty Name="EVENTPROCESSTEMPLATEID" ColumnName="EVENTPROCESSTEMPLATEID" />
+            <ScalarProperty Name="TEMPLATENAME" ColumnName="TEMPLATENAME" />
+            <ScalarProperty Name="OPTIONALLEVEL" ColumnName="OPTIONALLEVEL" />
+            <ScalarProperty Name="LASTMODIFIED" ColumnName="LASTMODIFIED" />
+            <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+            <ScalarProperty Name="PROCESSTEMPLATE" ColumnName="PROCESSTEMPLATE" />
+            <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+            <ScalarProperty Name="INITPARAMS" ColumnName="INITPARAMS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="OracleEventsModel">
+        <EntityTypeShape EntityType="OracleEventsModel.EVENTACTIONMAPPING" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9070849609375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OracleEventsModel.EVENTPROCESSTEMPLATE" Width="1.5" PointX="2.75" PointY="0.75" Height="2.2496956380208335" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
