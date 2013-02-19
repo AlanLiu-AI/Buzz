@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://dygraphs.com/dygraph-combined.js"></script>
+
+</head>
+<body>
+<body>
+<div class="container">
+	<div id="chartDiv" class="ui-widget ui-widget-content ui-corner-all" style="width: 500px; height: 320px"></div>
+	<script type="text/javascript">
+  g = new Dygraph(
+    document.getElementById("chartDiv"),
+    "temperatures.csv", // path to CSV file
+    {
+		rollPeriod: 7,
+		//showRoller: true,
+	}          // options
+  );
+</script>
+</div>	
+
+<div id="graphdiv"></div>
+<script type="text/javascript">
+  g = new Dygraph(
+
+    // containing div
+    document.getElementById("graphdiv"),
+
+    // CSV or path to a CSV file.
+    "Date,Temperature\n" +
+    "2008-05-07,75\n" +
+    "2008-05-08,70\n" +
+    "2008-05-09,80\n" +
+    "2008-05-10,\n" +
+    "2008-05-11,79\n" +
+    "2008-05-12,75" 
+
+  );
+</script>	
+</body>
+</html>
