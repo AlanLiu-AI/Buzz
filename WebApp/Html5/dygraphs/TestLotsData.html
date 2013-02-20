@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://dygraphs.com/dygraph-combined.js"></script>
+
+</head>
+<body>
+<body>
+<div class="container">
+	<div id="g1" class="ui-widget ui-widget-content ui-corner-all" style="width: 500px; height: 320px"></div>
+	<script type="text/javascript">
+	  g1 = new Dygraph(
+	    document.getElementById("g1"),
+	    "LotsData5K.csv", // path to CSV file
+	    {
+			//rollPeriod: 7,
+			//showRoller: true,
+		}          // options
+	  );
+	</script>
+
+	<div id="g2" class="ui-widget ui-widget-content ui-corner-all" style="width: 500px; height: 320px"></div>
+	<script type="text/javascript">
+	  g2 = new Dygraph(
+	    document.getElementById("g2"),
+	    "LotsData25K.csv", // path to CSV file
+	    {
+			//rollPeriod: 7,
+			//showRoller: true,
+		}          // options
+	  );
+	</script>
+</div>
+</body>
+</html>
