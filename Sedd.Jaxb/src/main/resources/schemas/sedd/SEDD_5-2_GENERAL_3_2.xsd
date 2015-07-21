@@ -1,0 +1,1081 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:sedd="http://www.epa.gov/osainter/fem/seddspec5" targetNamespace="http://www.epa.gov/osainter/fem/seddspec5">
+	<element name="Header">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:ClientID"/>
+				<element ref="sedd:ClientName"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:DateFormat"/>
+				<element ref="sedd:EDDID"/>
+				<element ref="sedd:EDDImplementationID"/>
+				<element ref="sedd:EDDImplementationVersion"/>
+				<element ref="sedd:EDDVersion"/>
+				<element ref="sedd:GeneratingSystemID"/>
+				<element ref="sedd:GeneratingSystemVersion"/>
+				<element ref="sedd:LabContract"/>
+				<element ref="sedd:LabContractModificationDescription"/>
+				<element ref="sedd:LabContractModificationID"/>
+				<element ref="sedd:LabDataPackageID"/>
+				<element ref="sedd:LabDataPackageName"/>
+				<element ref="sedd:LabDataPackageVersion"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:LabNarrative"/>
+				<element ref="sedd:LabQualifiersDefinition"/>
+				<element ref="sedd:LabReportedDate"/>
+				<element ref="sedd:ProjectID"/>
+				<element ref="sedd:ProjectName"/>
+				<element ref="sedd:SiteID"/>
+				<element ref="sedd:SiteName"/>
+				<element ref="sedd:ContactInformation"/>
+				<element ref="sedd:SamplePlusMethod"/>
+				<element ref="sedd:InstrumentQC"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="Analysis">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AliquotAmount"/>
+				<element ref="sedd:AliquotAmountUnits"/>
+				<element ref="sedd:AnalysisBatch"/>
+				<element ref="sedd:AnalysisBatchEnd"/>
+				<element ref="sedd:AnalysisDuration"/>
+				<element ref="sedd:AnalysisDurationUnits"/>
+				<element ref="sedd:AnalysisGroupID"/>
+				<element ref="sedd:AnalysisType"/>
+				<element ref="sedd:Analyst"/>
+				<element ref="sedd:AnalyzedAmount"/>
+				<element ref="sedd:AnalyzedAmountUnits"/>
+				<element ref="sedd:AnalyzedDate"/>
+				<element ref="sedd:BackgroundCorrection"/>
+				<element ref="sedd:BackgroundRawData"/>
+				<element ref="sedd:BackgroundType"/>
+				<element ref="sedd:BottleID"/>
+				<element ref="sedd:ClientAnalysisID"/>
+				<element ref="sedd:ClientMethodCode"/>
+				<element ref="sedd:ClientMethodID"/>
+				<element ref="sedd:ClientMethodModificationDescription"/>
+				<element ref="sedd:ClientMethodModificationID"/>
+				<element ref="sedd:ClientMethodName"/>
+				<element ref="sedd:ClientMethodSource"/>
+				<element ref="sedd:ClientMethodVersion"/>
+				<element ref="sedd:Column"/>
+				<element ref="sedd:ColumnInternalDiameter"/>
+				<element ref="sedd:ColumnInternalDiameterUnits"/>
+				<element ref="sedd:ColumnLength"/>
+				<element ref="sedd:ColumnLengthUnits"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:ConfirmationAnalysisID"/>
+				<element ref="sedd:Counts"/>
+				<element ref="sedd:CountsUncertainty"/>
+				<element ref="sedd:CountsUncertaintyConfidenceLevel"/>
+				<element ref="sedd:CountsUncertaintyDetermination"/>
+				<element ref="sedd:CountsUncertaintyIntervalType"/>
+				<element ref="sedd:CountsUncertaintyLimitHigh"/>
+				<element ref="sedd:CountsUncertaintyLimitLow"/>
+				<element ref="sedd:CountsUncertaintyType"/>
+				<element ref="sedd:CountsUnits"/>
+				<element ref="sedd:DetectorID"/>
+				<element ref="sedd:DetectorType"/>
+				<element ref="sedd:DilutionFactor"/>
+				<element ref="sedd:Efficiency"/>
+				<element ref="sedd:HeatedPurge"/>
+				<element ref="sedd:Inclusion"/>
+				<element ref="sedd:InjectionVolume"/>
+				<element ref="sedd:InjectionVolumeUnits"/>
+				<element ref="sedd:InstrumentID"/>
+				<element ref="sedd:InterelementCorrection"/>
+				<element ref="sedd:LabAnalysisID"/>
+				<element ref="sedd:LabFileID"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabMethodID"/>
+				<element ref="sedd:LabMethodName"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:MethodCode"/>
+				<element ref="sedd:MethodID"/>
+				<element ref="sedd:MethodModificationDescription"/>
+				<element ref="sedd:MethodModificationID"/>
+				<element ref="sedd:MethodName"/>
+				<element ref="sedd:MethodSource"/>
+				<element ref="sedd:MethodVersion"/>
+				<element ref="sedd:OriginalLabAnalysisID"/>
+				<element ref="sedd:PreparationBatch"/>
+				<element ref="sedd:ProcedureID"/>
+				<element ref="sedd:ProcedureName"/>
+				<element ref="sedd:ReferenceDate"/>
+				<element ref="sedd:ResultBasis"/>
+				<element ref="sedd:RunBatch"/>
+				<element ref="sedd:SampleAmount"/>
+				<element ref="sedd:SampleAmountUnits"/>
+				<element ref="sedd:Temperature"/>
+				<element ref="sedd:TemperatureUnits"/>
+				<element ref="sedd:Wavelength"/>
+				<element ref="sedd:WavelengthUnits"/>
+				<element ref="sedd:Yield"/>
+				<element ref="sedd:PreparationPlusCleanup"/>
+				<element ref="sedd:Analyte"/>
+				<element ref="sedd:AnalyteGroup"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="AnalysisGroup">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AnalysisGroupID"/>
+				<element ref="sedd:AnalysisType"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:Analyte"/>
+				<element ref="sedd:AnalyteGroup"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="Analyte">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AmountAdded"/>
+				<element ref="sedd:AmountAddedUnits"/>
+				<element ref="sedd:AmountAddedLocation"/>
+				<element ref="sedd:AnalyteGroupID"/>
+				<element ref="sedd:AnalyteName"/>
+				<element ref="sedd:AnalyteNameContext"/>
+				<element ref="sedd:AnalyteType"/>
+				<element ref="sedd:BiasErrorRatio"/>
+				<element ref="sedd:CalibrationBasis"/>
+				<element ref="sedd:CalibrationFactor"/>
+				<element ref="sedd:CalibrationFactorUnits"/>
+				<element ref="sedd:CalibrationType"/>
+				<element ref="sedd:CASRegistryNumber"/>
+				<element ref="sedd:ClientAnalyteID"/>
+				<element ref="sedd:ClientAnalyteName"/>
+				<element ref="sedd:Coeffa0"/>
+				<element ref="sedd:Coeffa1"/>
+				<element ref="sedd:Coeffa2"/>
+				<element ref="sedd:Coeffa3"/>
+				<element ref="sedd:CoeffOfDetermination"/>
+				<element ref="sedd:CoeffOfDeterminationLimitLow"/>
+				<element ref="sedd:CoeffOfDeterminationLimitType"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:CorrelationCoeff"/>
+				<element ref="sedd:CorrelationCoeffLimitLow"/>
+				<element ref="sedd:CorrelationCoeffLimitType"/>
+				<element ref="sedd:Counts"/>
+				<element ref="sedd:CountsUncertainty"/>
+				<element ref="sedd:CountsUncertaintyConfidenceLevel"/>
+				<element ref="sedd:CountsUncertaintyDetermination"/>
+				<element ref="sedd:CountsUncertaintyIntervalType"/>
+				<element ref="sedd:CountsUncertaintyLimitHigh"/>
+				<element ref="sedd:CountsUncertaintyLimitLow"/>
+				<element ref="sedd:CountsUncertaintyType"/>
+				<element ref="sedd:CountsUnits"/>
+				<element ref="sedd:DetectionLimit"/>
+				<element ref="sedd:DetectionLimitType"/>
+				<element ref="sedd:DetectionLimitUnits"/>
+				<element ref="sedd:DifferenceErrorRatio"/>
+				<element ref="sedd:Efficiency"/>
+				<element ref="sedd:ExpectedResult"/>
+				<element ref="sedd:ExpectedResultUncertainty"/>
+				<element ref="sedd:ExpectedResultUncertaintyConfidenceLevel"/>
+				<element ref="sedd:ExpectedResultUncertaintyDetermination"/>
+				<element ref="sedd:ExpectedResultUncertaintyIntervalType"/>
+				<element ref="sedd:ExpectedResultUncertaintyLimitHigh"/>
+				<element ref="sedd:ExpectedResultUncertaintyLimitLow"/>
+				<element ref="sedd:ExpectedResultUncertaintyType"/>
+				<element ref="sedd:ExpectedResultUncertaintyUnits"/>
+				<element ref="sedd:ExpectedResultUnits"/>
+				<element ref="sedd:Inclusion"/>
+				<element ref="sedd:IntermediateResult"/>
+				<element ref="sedd:IntermediateResultLimitHigh"/>
+				<element ref="sedd:IntermediateResultLimitLow"/>
+				<element ref="sedd:IntermediateResultLimitType"/>
+				<element ref="sedd:IntermediateResultUnits"/>
+				<element ref="sedd:LabAnalyteID"/>
+				<element ref="sedd:LabQualifiers"/>
+				<element ref="sedd:LotNumber"/>
+				<element ref="sedd:Mass"/>
+				<element ref="sedd:MassLimitHigh"/>
+				<element ref="sedd:MassLimitLow"/>
+				<element ref="sedd:MassLimitType"/>
+				<element ref="sedd:MassUnits"/>
+				<element ref="sedd:MeanCalibrationFactor"/>
+				<element ref="sedd:MeanCalibrationFactorUnits"/>
+				<element ref="sedd:MeanRRF"/>
+				<element ref="sedd:MeanRRFLimitLow"/>
+				<element ref="sedd:MeanRRFLimitType"/>
+				<element ref="sedd:PeakID"/>
+				<element ref="sedd:PercentBreakdown"/>
+				<element ref="sedd:PercentBreakdownLimitHigh"/>
+				<element ref="sedd:PercentBreakdownLimitType"/>
+				<element ref="sedd:PercentDifference"/>
+				<element ref="sedd:PercentDifferenceLimitHigh"/>
+				<element ref="sedd:PercentDifferenceLimitLow"/>
+				<element ref="sedd:PercentDifferenceLimitType"/>
+				<element ref="sedd:PercentMatch"/>
+				<element ref="sedd:PercentRecovery"/>
+				<element ref="sedd:PercentRecoveryLimitHigh"/>
+				<element ref="sedd:PercentRecoveryLimitLow"/>
+				<element ref="sedd:PercentRecoveryLimitType"/>
+				<element ref="sedd:PercentRecoveryType"/>
+				<element ref="sedd:PercentRSD"/>
+				<element ref="sedd:PercentRSDLimitHigh"/>
+				<element ref="sedd:PercentRSDLimitLow"/>
+				<element ref="sedd:PercentRSDLimitType"/>
+				<element ref="sedd:QuantitationBasis"/>
+				<element ref="sedd:QuantitationLimit"/>
+				<element ref="sedd:QuantitationLimitType"/>
+				<element ref="sedd:QuantitationLimitUnits"/>
+				<element ref="sedd:ReportingLimit"/>
+				<element ref="sedd:ReportingLimitType"/>
+				<element ref="sedd:ReportingLimitUnits"/>
+				<element ref="sedd:Response"/>
+				<element ref="sedd:ResponseLimitHigh"/>
+				<element ref="sedd:ResponseLimitLow"/>
+				<element ref="sedd:ResponseLimitType"/>
+				<element ref="sedd:ResponseUnits"/>
+				<element ref="sedd:Result"/>
+				<element ref="sedd:ResultLimitHigh"/>
+				<element ref="sedd:ResultLimitLow"/>
+				<element ref="sedd:ResultLimitType"/>
+				<element ref="sedd:ResultType"/>
+				<element ref="sedd:ResultUncertainty"/>
+				<element ref="sedd:ResultUncertaintyConfidenceLevel"/>
+				<element ref="sedd:ResultUncertaintyDetermination"/>
+				<element ref="sedd:ResultUncertaintyIntervalType"/>
+				<element ref="sedd:ResultUncertaintyLimitHigh"/>
+				<element ref="sedd:ResultUncertaintyLimitLow"/>
+				<element ref="sedd:ResultUncertaintyType"/>
+				<element ref="sedd:ResultUncertaintyUnits"/>
+				<element ref="sedd:ResultUnits"/>
+				<element ref="sedd:RPD"/>
+				<element ref="sedd:RPDLimitHigh"/>
+				<element ref="sedd:RPDLimitType"/>
+				<element ref="sedd:RPDType"/>
+				<element ref="sedd:RRF"/>
+				<element ref="sedd:RRFLimitLow"/>
+				<element ref="sedd:RRFLimitType"/>
+				<element ref="sedd:StandardConcentration"/>
+				<element ref="sedd:StandardConcentrationUnits"/>
+				<element ref="sedd:StandardDeviation"/>
+				<element ref="sedd:StandardDeviationUnits"/>
+				<element ref="sedd:StandardFinalAmount"/>
+				<element ref="sedd:StandardFinalAmountUnits"/>
+				<element ref="sedd:StandardID"/>
+				<element ref="sedd:StandardSource"/>
+				<element ref="sedd:TailingFactor"/>
+				<element ref="sedd:TailingFactorLimitHigh"/>
+				<element ref="sedd:TailingFactorLimitType"/>
+				<element ref="sedd:Wavelength"/>
+				<element ref="sedd:WavelengthUnits"/>
+				<element ref="sedd:WeightingFactor"/>
+				<element ref="sedd:Peak"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="AnalyteComparison">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AnalyteName"/>
+				<element ref="sedd:AnalyteNameContext"/>
+				<element ref="sedd:CASRegistryNumber"/>
+				<element ref="sedd:ClientAnalyteID"/>
+				<element ref="sedd:ClientAnalyteName"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:CorrectionFactor"/>
+				<element ref="sedd:LabAnalyteID"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="Characteristic">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:CharacteristicType"/>
+				<element ref="sedd:CharacteristicValue"/>
+				<element ref="sedd:CharacteristicUnits"/>
+				<element ref="sedd:Comment"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="AnalyteGroup">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AnalyteGroupID"/>
+				<element ref="sedd:AnalyteName"/>
+				<element ref="sedd:AnalyteNameContext"/>
+				<element ref="sedd:AnalyteType"/>
+				<element ref="sedd:CASRegistryNumber"/>
+				<element ref="sedd:ClientAnalyteID"/>
+				<element ref="sedd:ClientAnalyteName"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:LabAnalyteID"/>
+				<element ref="sedd:LabQualifiers"/>
+				<element ref="sedd:Result"/>
+				<element ref="sedd:ResultType"/>
+				<element ref="sedd:ResultUncertainty"/>
+				<element ref="sedd:ResultUnits"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="ContactInformation">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:LabAddress1"/>
+				<element ref="sedd:LabAddress2"/>
+				<element ref="sedd:LabCity"/>
+				<element ref="sedd:LabCountry"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:LabPointOfContact"/>
+				<element ref="sedd:LabPointOfContactElectronicAddress"/>
+				<element ref="sedd:LabPointOfContactTitle"/>
+				<element ref="sedd:LabPointOfContactType"/>
+				<element ref="sedd:LabState"/>
+				<element ref="sedd:LabTelephoneNumber"/>
+				<element ref="sedd:LabType"/>
+				<element ref="sedd:LabZipCode"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="Handling">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:Analyst"/>
+				<element ref="sedd:BottleID"/>
+				<element ref="sedd:ClientMethodCode"/>
+				<element ref="sedd:ClientMethodID"/>
+				<element ref="sedd:ClientMethodModificationDescription"/>
+				<element ref="sedd:ClientMethodModificationID"/>
+				<element ref="sedd:ClientMethodName"/>
+				<element ref="sedd:ClientMethodSource"/>
+				<element ref="sedd:ClientMethodVersion"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:HandledDate"/>
+				<element ref="sedd:HandlingBatch"/>
+				<element ref="sedd:HandlingType"/>
+				<element ref="sedd:InitialAmount"/>
+				<element ref="sedd:InitialAmountUnits"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabMethodID"/>
+				<element ref="sedd:LabMethodName"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:MethodCode"/>
+				<element ref="sedd:MethodID"/>
+				<element ref="sedd:MethodModificationDescription"/>
+				<element ref="sedd:MethodModificationID"/>
+				<element ref="sedd:MethodName"/>
+				<element ref="sedd:MethodSource"/>
+				<element ref="sedd:MethodVersion"/>
+				<element ref="sedd:ProcedureID"/>
+				<element ref="sedd:ProcedureName"/>
+				<element ref="sedd:SampleAmount"/>
+				<element ref="sedd:SampleAmountUnits"/>
+				<element ref="sedd:Characteristic"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="InstrumentQC">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:ClientInstrumentQCType"/>
+				<element ref="sedd:ClientMethodCode"/>
+				<element ref="sedd:ClientMethodID"/>
+				<element ref="sedd:ClientMethodModificationDescription"/>
+				<element ref="sedd:ClientMethodModificationID"/>
+				<element ref="sedd:ClientMethodName"/>
+				<element ref="sedd:ClientMethodSource"/>
+				<element ref="sedd:ClientMethodVersion"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabInstrumentQCID"/>
+				<element ref="sedd:LabMethodID"/>
+				<element ref="sedd:LabMethodName"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:MethodCode"/>
+				<element ref="sedd:MethodID"/>
+				<element ref="sedd:MethodModificationDescription"/>
+				<element ref="sedd:MethodModificationID"/>
+				<element ref="sedd:MethodName"/>
+				<element ref="sedd:MethodSource"/>
+				<element ref="sedd:MethodVersion"/>
+				<element ref="sedd:QCLinkage"/>
+				<element ref="sedd:QCType"/>
+				<element ref="sedd:AnalysisGroup"/>
+				<element ref="sedd:Analysis"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="Peak">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:CalibrationFactor"/>
+				<element ref="sedd:CalibrationFactorUnits"/>
+				<element ref="sedd:CalibrationType"/>
+				<element ref="sedd:Coeffa0"/>
+				<element ref="sedd:Coeffa1"/>
+				<element ref="sedd:Coeffa2"/>
+				<element ref="sedd:Coeffa3"/>
+				<element ref="sedd:CoeffOfDetermination"/>
+				<element ref="sedd:CoeffOfDeterminationLimitLow"/>
+				<element ref="sedd:CoeffOfDeterminationLimitType"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:CorrelationCoeff"/>
+				<element ref="sedd:CorrelationCoeffLimitLow"/>
+				<element ref="sedd:CorrelationCoeffLimitType"/>
+				<element ref="sedd:DetectionLimit"/>
+				<element ref="sedd:DetectionLimitType"/>
+				<element ref="sedd:DetectionLimitUnits"/>
+				<element ref="sedd:DifferenceErrorRatio"/>
+				<element ref="sedd:Efficiency"/>
+				<element ref="sedd:Inclusion"/>
+				<element ref="sedd:IntermediateResult"/>
+				<element ref="sedd:IntermediateResultLimitHigh"/>
+				<element ref="sedd:IntermediateResultLimitLow"/>
+				<element ref="sedd:IntermediateResultLimitType"/>
+				<element ref="sedd:IntermediateResultUnits"/>
+				<element ref="sedd:LabQualifiers"/>
+				<element ref="sedd:ManualIntegration"/>
+				<element ref="sedd:Mass"/>
+				<element ref="sedd:MassLimitHigh"/>
+				<element ref="sedd:MassLimitLow"/>
+				<element ref="sedd:MassLimitType"/>
+				<element ref="sedd:MassUnits"/>
+				<element ref="sedd:MeanCalibrationFactor"/>
+				<element ref="sedd:MeanCalibrationFactorUnits"/>
+				<element ref="sedd:MeanRetentionTime"/>
+				<element ref="sedd:MeanRetentionTimeLimitHigh"/>
+				<element ref="sedd:MeanRetentionTimeLimitLow"/>
+				<element ref="sedd:MeanRetentionTimeLimitType"/>
+				<element ref="sedd:MeanRetentionTimeUnits"/>
+				<element ref="sedd:MeanRRF"/>
+				<element ref="sedd:MeanRRFLimitLow"/>
+				<element ref="sedd:MeanRRFLimitType"/>
+				<element ref="sedd:PeakID"/>
+				<element ref="sedd:PeakRatio"/>
+				<element ref="sedd:PeakRatioLimitHigh"/>
+				<element ref="sedd:PeakRatioLimitLow"/>
+				<element ref="sedd:PeakRatioLimitType"/>
+				<element ref="sedd:PercentDifference"/>
+				<element ref="sedd:PercentDifferenceLimitHigh"/>
+				<element ref="sedd:PercentDifferenceLimitLow"/>
+				<element ref="sedd:PercentDifferenceLimitType"/>
+				<element ref="sedd:PercentRatio"/>
+				<element ref="sedd:PercentRatioLimitHigh"/>
+				<element ref="sedd:PercentRatioLimitLow"/>
+				<element ref="sedd:PercentRatioLimitType"/>
+				<element ref="sedd:PercentRecovery"/>
+				<element ref="sedd:PercentRecoveryLimitHigh"/>
+				<element ref="sedd:PercentRecoveryLimitLow"/>
+				<element ref="sedd:PercentRecoveryLimitType"/>
+				<element ref="sedd:PercentRecoveryType"/>
+				<element ref="sedd:PercentRSD"/>
+				<element ref="sedd:PercentRSDLimitHigh"/>
+				<element ref="sedd:PercentRSDLimitLow"/>
+				<element ref="sedd:PercentRSDLimitType"/>
+				<element ref="sedd:QuantitationLimit"/>
+				<element ref="sedd:QuantitationLimitType"/>
+				<element ref="sedd:QuantitationLimitUnits"/>
+				<element ref="sedd:ReportingLimit"/>
+				<element ref="sedd:ReportingLimitType"/>
+				<element ref="sedd:ReportingLimitUnits"/>
+				<element ref="sedd:Resolution"/>
+				<element ref="sedd:ResolutionLimitHigh"/>
+				<element ref="sedd:ResolutionLimitLow"/>
+				<element ref="sedd:ResolutionLimitType"/>
+				<element ref="sedd:ResolutionType"/>
+				<element ref="sedd:ResolutionUnits"/>
+				<element ref="sedd:Response"/>
+				<element ref="sedd:ResponseLimitHigh"/>
+				<element ref="sedd:ResponseLimitLow"/>
+				<element ref="sedd:ResponseLimitType"/>
+				<element ref="sedd:ResponseType"/>
+				<element ref="sedd:ResponseUnits"/>
+				<element ref="sedd:Result"/>
+				<element ref="sedd:ResultLimitHigh"/>
+				<element ref="sedd:ResultLimitLow"/>
+				<element ref="sedd:ResultLimitType"/>
+				<element ref="sedd:ResultType"/>
+				<element ref="sedd:ResultUncertainty"/>
+				<element ref="sedd:ResultUnits"/>
+				<element ref="sedd:RetentionTime"/>
+				<element ref="sedd:RetentionTimeLimitHigh"/>
+				<element ref="sedd:RetentionTimeLimitLow"/>
+				<element ref="sedd:RetentionTimeLimitType"/>
+				<element ref="sedd:RetentionTimeUnits"/>
+				<element ref="sedd:RRF"/>
+				<element ref="sedd:RRFLimitLow"/>
+				<element ref="sedd:RRFLimitType"/>
+				<element ref="sedd:StandardDeviation"/>
+				<element ref="sedd:StandardDeviationUnits"/>
+				<element ref="sedd:Wavelength"/>
+				<element ref="sedd:WavelengthUnits"/>
+				<element ref="sedd:WeightingFactor"/>
+				<element ref="sedd:AnalyteComparison"/>
+				<element ref="sedd:PeakComparison"/>
+				<element ref="sedd:PeakReplicate"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="PeakComparison">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AnalyteName"/>
+				<element ref="sedd:AnalyteNameContext"/>
+				<element ref="sedd:CASRegistryNumber"/>
+				<element ref="sedd:ClientAnalyteID"/>
+				<element ref="sedd:ClientAnalyteName"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:LabAnalyteID"/>
+				<element ref="sedd:PeakID"/>
+				<element ref="sedd:PeakRatio"/>
+				<element ref="sedd:PeakRatioLimitHigh"/>
+				<element ref="sedd:PeakRatioLimitLow"/>
+				<element ref="sedd:PeakRatioLimitType"/>
+				<element ref="sedd:PercentRatio"/>
+				<element ref="sedd:PercentRatioLimitHigh"/>
+				<element ref="sedd:PercentRatioLimitLow"/>
+				<element ref="sedd:PercentRatioLimitType"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="PeakReplicate">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:IntermediateResult"/>
+				<element ref="sedd:IntermediateResultLimitHigh"/>
+				<element ref="sedd:IntermediateResultLimitLow"/>
+				<element ref="sedd:IntermediateResultLimitType"/>
+				<element ref="sedd:IntermediateResultUnits"/>
+				<element ref="sedd:Mass"/>
+				<element ref="sedd:MassLimitHigh"/>
+				<element ref="sedd:MassLimitLow"/>
+				<element ref="sedd:MassLimitType"/>
+				<element ref="sedd:MassUnits"/>
+				<element ref="sedd:PeakReplicateID"/>
+				<element ref="sedd:Resolution"/>
+				<element ref="sedd:ResolutionLimitHigh"/>
+				<element ref="sedd:ResolutionLimitLow"/>
+				<element ref="sedd:ResolutionLimitType"/>
+				<element ref="sedd:ResolutionType"/>
+				<element ref="sedd:ResolutionUnits"/>
+				<element ref="sedd:Response"/>
+				<element ref="sedd:ResponseLimitHigh"/>
+				<element ref="sedd:ResponseLimitLow"/>
+				<element ref="sedd:ResponseLimitType"/>
+				<element ref="sedd:ResponseType"/>
+				<element ref="sedd:ResponseUnits"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="PreparationPlusCleanup">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AliquotAmount"/>
+				<element ref="sedd:AliquotAmountUnits"/>
+				<element ref="sedd:Analyst"/>
+				<element ref="sedd:BottleID"/>
+				<element ref="sedd:CleanedUpDate"/>
+				<element ref="sedd:CleanupBatch"/>
+				<element ref="sedd:CleanupType"/>
+				<element ref="sedd:ClientMethodCode"/>
+				<element ref="sedd:ClientMethodID"/>
+				<element ref="sedd:ClientMethodModificationDescription"/>
+				<element ref="sedd:ClientMethodModificationID"/>
+				<element ref="sedd:ClientMethodName"/>
+				<element ref="sedd:ClientMethodSource"/>
+				<element ref="sedd:ClientMethodVersion"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:Efficiency"/>
+				<element ref="sedd:FinalAmount"/>
+				<element ref="sedd:FinalAmountUnits"/>
+				<element ref="sedd:InitialAmount"/>
+				<element ref="sedd:InitialAmountUnits"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabMethodID"/>
+				<element ref="sedd:LabMethodName"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:LotNumber"/>
+				<element ref="sedd:MethodCode"/>
+				<element ref="sedd:MethodID"/>
+				<element ref="sedd:MethodModificationDescription"/>
+				<element ref="sedd:MethodModificationID"/>
+				<element ref="sedd:MethodName"/>
+				<element ref="sedd:MethodSource"/>
+				<element ref="sedd:MethodVersion"/>
+				<element ref="sedd:PreparationBatch"/>
+				<element ref="sedd:PreparationPlusCleanupType"/>
+				<element ref="sedd:PreparationType"/>
+				<element ref="sedd:PreparedDate"/>
+				<element ref="sedd:ProcedureID"/>
+				<element ref="sedd:ProcedureName"/>
+				<element ref="sedd:SampleAmount"/>
+				<element ref="sedd:SampleAmountUnits"/>
+				<element ref="sedd:Solvent"/>
+				<element ref="sedd:Characteristic"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="ReportedResult">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:AnalysisGroupID"/>
+				<element ref="sedd:AnalyteGroupID"/>
+				<element ref="sedd:AnalyteName"/>
+				<element ref="sedd:AnalyteNameContext"/>
+				<element ref="sedd:AnalyteType"/>
+				<element ref="sedd:BiasErrorRatio"/>
+				<element ref="sedd:CASRegistryNumber"/>
+				<element ref="sedd:ClientAnalyteID"/>
+				<element ref="sedd:ClientAnalyteName"/>
+				<element ref="sedd:ClientDetectionLimit"/>
+				<element ref="sedd:ClientDetectionLimitUnits"/>
+				<element ref="sedd:ClientQuantitationLimit"/>
+				<element ref="sedd:ClientQuantitationLimitUnits"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:DetectionLimit"/>
+				<element ref="sedd:DetectionLimitType"/>
+				<element ref="sedd:DetectionLimitUnits"/>
+				<element ref="sedd:DifferenceErrorRatio"/>
+				<element ref="sedd:ExpectedResult"/>
+				<element ref="sedd:ExpectedResultUncertainty"/>
+				<element ref="sedd:ExpectedResultUncertaintyConfidenceLevel"/>
+				<element ref="sedd:ExpectedResultUncertaintyDetermination"/>
+				<element ref="sedd:ExpectedResultUncertaintyIntervalType"/>
+				<element ref="sedd:ExpectedResultUncertaintyLimitHigh"/>
+				<element ref="sedd:ExpectedResultUncertaintyLimitLow"/>
+				<element ref="sedd:ExpectedResultUncertaintyType"/>
+				<element ref="sedd:ExpectedResultUncertaintyUnits"/>
+				<element ref="sedd:ExpectedResultUnits"/>
+				<element ref="sedd:LabAnalysisID"/>
+				<element ref="sedd:LabAnalyteID"/>
+				<element ref="sedd:LabQualifiers"/>
+				<element ref="sedd:LabResultStatus"/>
+				<element ref="sedd:PeakID"/>
+				<element ref="sedd:PercentDifference"/>
+				<element ref="sedd:PercentDifferenceLimitHigh"/>
+				<element ref="sedd:PercentDifferenceLimitLow"/>
+				<element ref="sedd:PercentDifferenceLimitType"/>
+				<element ref="sedd:PercentRecovery"/>
+				<element ref="sedd:PercentRecoveryLimitHigh"/>
+				<element ref="sedd:PercentRecoveryLimitLow"/>
+				<element ref="sedd:PercentRecoveryLimitType"/>
+				<element ref="sedd:PercentRecoveryType"/>
+				<element ref="sedd:QuantitationLimit"/>
+				<element ref="sedd:QuantitationLimitType"/>
+				<element ref="sedd:QuantitationLimitUnits"/>
+				<element ref="sedd:ReportingLimit"/>
+				<element ref="sedd:ReportingLimitType"/>
+				<element ref="sedd:ReportingLimitUnits"/>
+				<element ref="sedd:Result"/>
+				<element ref="sedd:ResultLimitHigh"/>
+				<element ref="sedd:ResultLimitLow"/>
+				<element ref="sedd:ResultLimitType"/>
+				<element ref="sedd:ResultType"/>
+				<element ref="sedd:ResultUncertainty"/>
+				<element ref="sedd:ResultUncertaintyConfidenceLevel"/>
+				<element ref="sedd:ResultUncertaintyDetermination"/>
+				<element ref="sedd:ResultUncertaintyIntervalType"/>
+				<element ref="sedd:ResultUncertaintyLimitHigh"/>
+				<element ref="sedd:ResultUncertaintyLimitLow"/>
+				<element ref="sedd:ResultUncertaintyType"/>
+				<element ref="sedd:ResultUncertaintyUnits"/>
+				<element ref="sedd:ResultUnits"/>
+				<element ref="sedd:RetentionTime"/>
+				<element ref="sedd:RetentionTimeUnits"/>
+				<element ref="sedd:RPD"/>
+				<element ref="sedd:RPDLimitHigh"/>
+				<element ref="sedd:RPDLimitType"/>
+				<element ref="sedd:RPDType"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="SamplePlusMethod">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="sedd:Bottles"/>
+				<element ref="sedd:BottleType"/>
+				<element ref="sedd:ClientID"/>
+				<element ref="sedd:ClientMethodCategory"/>
+				<element ref="sedd:ClientMethodCode"/>
+				<element ref="sedd:ClientMethodID"/>
+				<element ref="sedd:ClientMethodModificationDescription"/>
+				<element ref="sedd:ClientMethodModificationID"/>
+				<element ref="sedd:ClientMethodName"/>
+				<element ref="sedd:ClientMethodSource"/>
+				<element ref="sedd:ClientMethodType"/>
+				<element ref="sedd:ClientMethodVersion"/>
+				<element ref="sedd:ClientName"/>
+				<element ref="sedd:ClientSampleID"/>
+				<element ref="sedd:CollectedDate"/>
+				<element ref="sedd:CollectedEndDate"/>
+				<element ref="sedd:Comment"/>
+				<element ref="sedd:Composite"/>
+				<element ref="sedd:CoolerID"/>
+				<element ref="sedd:CustodyID"/>
+				<element ref="sedd:EquipmentBatch"/>
+				<element ref="sedd:Filtered"/>
+				<element ref="sedd:LabContract"/>
+				<element ref="sedd:LabContractModificationID"/>
+				<element ref="sedd:LabContractModificationDescription"/>
+				<element ref="sedd:LabID"/>
+				<element ref="sedd:LabMethodID"/>
+				<element ref="sedd:LabMethodName"/>
+				<element ref="sedd:LabName"/>
+				<element ref="sedd:LabReceiptDate"/>
+				<element ref="sedd:LabReportingBatch"/>
+				<element ref="sedd:LabSampleID"/>
+				<element ref="sedd:LocationID"/>
+				<element ref="sedd:LocationName"/>
+				<element ref="sedd:MatrixID"/>
+				<element ref="sedd:MatrixMedium"/>
+				<element ref="sedd:MethodBatch"/>
+				<element ref="sedd:MethodCategory"/>
+				<element ref="sedd:MethodCode"/>
+				<element ref="sedd:MethodID"/>
+				<element ref="sedd:MethodLevel"/>
+				<element ref="sedd:MethodModificationDescription"/>
+				<element ref="sedd:MethodModificationID"/>
+				<element ref="sedd:MethodName"/>
+				<element ref="sedd:MethodSource"/>
+				<element ref="sedd:MethodType"/>
+				<element ref="sedd:MethodVersion"/>
+				<element ref="sedd:OriginalClientSampleID"/>
+				<element ref="sedd:OriginalLabSampleID"/>
+				<element ref="sedd:PhaseAnalyzed"/>
+				<element ref="sedd:Preservative"/>
+				<element ref="sedd:ProjectID"/>
+				<element ref="sedd:ProjectName"/>
+				<element ref="sedd:QCCategory"/>
+				<element ref="sedd:QCLinkage"/>
+				<element ref="sedd:QCType"/>
+				<element ref="sedd:Quarantine"/>
+				<element ref="sedd:SamplingBatch"/>
+				<element ref="sedd:ShippingBatch"/>
+				<element ref="sedd:SiteID"/>
+				<element ref="sedd:SiteName"/>
+				<element ref="sedd:StorageBatch"/>
+				<element ref="sedd:Analysis"/>
+				<element ref="sedd:ReportedResult"/>
+				<element ref="sedd:Handling"/>
+				<element ref="sedd:AnalysisGroup"/>
+				<element ref="sedd:Characteristic"/>
+			</choice>
+		</complexType>
+	</element>
+	<element name="AliquotAmount" type="string"/>
+	<element name="AliquotAmountUnits" type="string"/>
+	<element name="AmountAdded" type="string"/>
+	<element name="AmountAddedUnits" type="string"/>
+	<element name="AmountAddedLocation" type="string"/>
+	<element name="AnalysisBatch" type="string"/>
+	<element name="AnalysisBatchEnd" type="string"/>
+	<element name="AnalysisDuration" type="string"/>
+	<element name="AnalysisDurationUnits" type="string"/>
+	<element name="AnalysisGroupID" type="string"/>
+	<element name="AnalysisType" type="string"/>
+	<element name="Analyst" type="string"/>
+	<element name="AnalyteGroupID" type="string"/>
+	<element name="AnalyteName" type="string"/>
+	<element name="AnalyteNameContext" type="string"/>
+	<element name="AnalyteType" type="string"/>
+	<element name="AnalyzedAmount" type="string"/>
+	<element name="AnalyzedAmountUnits" type="string"/>
+	<element name="AnalyzedDate" type="string"/>
+	<element name="BackgroundCorrection" type="string"/>
+	<element name="BackgroundRawData" type="string"/>
+	<element name="BackgroundType" type="string"/>
+	<element name="BiasErrorRatio" type="string"/>
+	<element name="Bottles" type="string"/>
+	<element name="BottleID" type="string"/>
+	<element name="BottleType" type="string"/>
+	<element name="CalibrationBasis" type="string"/>
+	<element name="CalibrationFactor" type="string"/>
+	<element name="CalibrationFactorUnits" type="string"/>
+	<element name="CalibrationType" type="string"/>
+	<element name="CASRegistryNumber" type="string"/>
+	<element name="CharacteristicType" type="string"/>
+	<element name="CharacteristicValue" type="string"/>
+	<element name="CharacteristicUnits" type="string"/>
+	<element name="CleanedUpDate" type="string"/>
+	<element name="CleanupBatch" type="string"/>
+	<element name="CleanupType" type="string"/>
+	<element name="ClientAnalysisID" type="string"/>
+	<element name="ClientAnalyteID" type="string"/>
+	<element name="ClientAnalyteName" type="string"/>
+	<element name="ClientDetectionLimit" type="string"/>
+	<element name="ClientDetectionLimitUnits" type="string"/>
+	<element name="ClientID" type="string"/>
+	<element name="ClientInstrumentQCType" type="string"/>
+	<element name="ClientMethodCategory" type="string"/>
+	<element name="ClientMethodCode" type="string"/>
+	<element name="ClientMethodID" type="string"/>
+	<element name="ClientMethodModificationDescription" type="string"/>
+	<element name="ClientMethodModificationID" type="string"/>
+	<element name="ClientMethodName" type="string"/>
+	<element name="ClientMethodSource" type="string"/>
+	<element name="ClientMethodType" type="string"/>
+	<element name="ClientMethodVersion" type="string"/>
+	<element name="ClientName" type="string"/>
+	<element name="ClientQuantitationLimit" type="string"/>
+	<element name="ClientQuantitationLimitUnits" type="string"/>
+	<element name="ClientSampleID" type="string"/>
+	<element name="Coeffa0" type="string"/>
+	<element name="Coeffa1" type="string"/>
+	<element name="Coeffa2" type="string"/>
+	<element name="Coeffa3" type="string"/>
+	<element name="CoeffOfDetermination" type="string"/>
+	<element name="CoeffOfDeterminationLimitLow" type="string"/>
+	<element name="CoeffOfDeterminationLimitType" type="string"/>
+	<element name="CollectedDate" type="string"/>
+	<element name="CollectedEndDate" type="string"/>
+	<element name="Column" type="string"/>
+	<element name="ColumnInternalDiameter" type="string"/>
+	<element name="ColumnInternalDiameterUnits" type="string"/>
+	<element name="ColumnLength" type="string"/>
+	<element name="ColumnLengthUnits" type="string"/>
+	<element name="Comment" type="string"/>
+	<element name="Composite" type="string"/>
+	<element name="ConfirmationAnalysisID" type="string"/>
+	<element name="CoolerID" type="string"/>
+	<element name="CorrectionFactor" type="string"/>
+	<element name="CorrelationCoeff" type="string"/>
+	<element name="CorrelationCoeffLimitLow" type="string"/>
+	<element name="CorrelationCoeffLimitType" type="string"/>
+	<element name="Counts" type="string"/>
+	<element name="CountsUncertainty" type="string"/>
+	<element name="CountsUncertaintyConfidenceLevel" type="string"/>
+	<element name="CountsUncertaintyDetermination" type="string"/>
+	<element name="CountsUncertaintyIntervalType" type="string"/>
+	<element name="CountsUncertaintyLimitHigh" type="string"/>
+	<element name="CountsUncertaintyLimitLow" type="string"/>
+	<element name="CountsUncertaintyType" type="string"/>
+	<element name="CountsUnits" type="string"/>
+	<element name="CustodyID" type="string"/>
+	<element name="DateFormat" type="string"/>
+	<element name="DetectionLimit" type="string"/>
+	<element name="DetectionLimitType" type="string"/>
+	<element name="DetectionLimitUnits" type="string"/>
+	<element name="DetectorID" type="string"/>
+	<element name="DetectorType" type="string"/>
+	<element name="DifferenceErrorRatio" type="string"/>
+	<element name="DilutionFactor" type="string"/>
+	<element name="EDDID" type="string"/>
+	<element name="EDDImplementationID" type="string"/>
+	<element name="EDDImplementationVersion" type="string"/>
+	<element name="EDDVersion" type="string"/>
+	<element name="Efficiency" type="string"/>
+	<element name="EquipmentBatch" type="string"/>
+	<element name="ExpectedResult" type="string"/>
+	<element name="ExpectedResultUncertainty" type="string"/>
+	<element name="ExpectedResultUncertaintyConfidenceLevel" type="string"/>
+	<element name="ExpectedResultUncertaintyDetermination" type="string"/>
+	<element name="ExpectedResultUncertaintyIntervalType" type="string"/>
+	<element name="ExpectedResultUncertaintyLimitHigh" type="string"/>
+	<element name="ExpectedResultUncertaintyLimitLow" type="string"/>
+	<element name="ExpectedResultUncertaintyType" type="string"/>
+	<element name="ExpectedResultUncertaintyUnits" type="string"/>
+	<element name="ExpectedResultUnits" type="string"/>
+	<element name="Filtered" type="string"/>
+	<element name="FinalAmount" type="string"/>
+	<element name="FinalAmountUnits" type="string"/>
+	<element name="GeneratingSystemID" type="string"/>
+	<element name="GeneratingSystemVersion" type="string"/>
+	<element name="HandledDate" type="string"/>
+	<element name="HandlingBatch" type="string"/>
+	<element name="HandlingType" type="string"/>
+	<element name="HeatedPurge" type="string"/>
+	<element name="Inclusion" type="string"/>
+	<element name="InitialAmount" type="string"/>
+	<element name="InitialAmountUnits" type="string"/>
+	<element name="InjectionVolume" type="string"/>
+	<element name="InjectionVolumeUnits" type="string"/>
+	<element name="InstrumentID" type="string"/>
+	<element name="InterelementCorrection" type="string"/>
+	<element name="IntermediateResult" type="string"/>
+	<element name="IntermediateResultLimitHigh" type="string"/>
+	<element name="IntermediateResultLimitLow" type="string"/>
+	<element name="IntermediateResultLimitType" type="string"/>
+	<element name="IntermediateResultUnits" type="string"/>
+	<element name="LabAddress1" type="string"/>
+	<element name="LabAddress2" type="string"/>
+	<element name="LabAnalysisID" type="string"/>
+	<element name="LabAnalyteID" type="string"/>
+	<element name="LabCity" type="string"/>
+	<element name="LabContract" type="string"/>
+	<element name="LabContractModificationDescription" type="string"/>
+	<element name="LabContractModificationID" type="string"/>
+	<element name="LabCountry" type="string"/>
+	<element name="LabDataPackageID" type="string"/>
+	<element name="LabDataPackageName" type="string"/>
+	<element name="LabDataPackageVersion" type="string"/>
+	<element name="LabFileID" type="string"/>
+	<element name="LabID" type="string"/>
+	<element name="LabInstrumentQCID" type="string"/>
+	<element name="LabMethodID" type="string"/>
+	<element name="LabMethodName" type="string"/>
+	<element name="LabName" type="string"/>
+	<element name="LabNarrative" type="string"/>
+	<element name="LabPointOfContact" type="string"/>
+	<element name="LabPointOfContactElectronicAddress" type="string"/>
+	<element name="LabPointOfContactTitle" type="string"/>
+	<element name="LabPointOfContactType" type="string"/>
+	<element name="LabQualifiers" type="string"/>
+	<element name="LabQualifiersDefinition" type="string"/>
+	<element name="LabReceiptDate" type="string"/>
+	<element name="LabReportedDate" type="string"/>
+	<element name="LabReportingBatch" type="string"/>
+	<element name="LabResultStatus" type="string"/>
+	<element name="LabSampleID" type="string"/>
+	<element name="LabState" type="string"/>
+	<element name="LabTelephoneNumber" type="string"/>
+	<element name="LabType" type="string"/>
+	<element name="LabZipCode" type="string"/>
+	<element name="LocationID" type="string"/>
+	<element name="LocationName" type="string"/>
+	<element name="LotNumber" type="string"/>
+	<element name="ManualIntegration" type="string"/>
+	<element name="Mass" type="string"/>
+	<element name="MassLimitHigh" type="string"/>
+	<element name="MassLimitLow" type="string"/>
+	<element name="MassLimitType" type="string"/>
+	<element name="MassUnits" type="string"/>
+	<element name="MatrixID" type="string"/>
+	<element name="MatrixMedium" type="string"/>
+	<element name="MeanCalibrationFactor" type="string"/>
+	<element name="MeanCalibrationFactorUnits" type="string"/>
+	<element name="MeanRetentionTime" type="string"/>
+	<element name="MeanRetentionTimeLimitHigh" type="string"/>
+	<element name="MeanRetentionTimeLimitLow" type="string"/>
+	<element name="MeanRetentionTimeLimitType" type="string"/>
+	<element name="MeanRetentionTimeUnits" type="string"/>
+	<element name="MeanRRF" type="string"/>
+	<element name="MeanRRFLimitLow" type="string"/>
+	<element name="MeanRRFLimitType" type="string"/>
+	<element name="MethodBatch" type="string"/>
+	<element name="MethodCategory" type="string"/>
+	<element name="MethodCode" type="string"/>
+	<element name="MethodID" type="string"/>
+	<element name="MethodLevel" type="string"/>
+	<element name="MethodModificationDescription" type="string"/>
+	<element name="MethodModificationID" type="string"/>
+	<element name="MethodName" type="string"/>
+	<element name="MethodSource" type="string"/>
+	<element name="MethodType" type="string"/>
+	<element name="MethodVersion" type="string"/>
+	<element name="OriginalClientSampleID" type="string"/>
+	<element name="OriginalLabAnalysisID" type="string"/>
+	<element name="OriginalLabSampleID" type="string"/>
+	<element name="PeakID" type="string"/>
+	<element name="PeakReplicateID" type="string"/>
+	<element name="PeakRatio" type="string"/>
+	<element name="PeakRatioLimitHigh" type="string"/>
+	<element name="PeakRatioLimitLow" type="string"/>
+	<element name="PeakRatioLimitType" type="string"/>
+	<element name="PercentBreakdown" type="string"/>
+	<element name="PercentBreakdownLimitHigh" type="string"/>
+	<element name="PercentBreakdownLimitType" type="string"/>
+	<element name="PercentDifference" type="string"/>
+	<element name="PercentDifferenceLimitHigh" type="string"/>
+	<element name="PercentDifferenceLimitLow" type="string"/>
+	<element name="PercentDifferenceLimitType" type="string"/>
+	<element name="PercentMatch" type="string"/>
+	<element name="PercentRatio" type="string"/>
+	<element name="PercentRatioLimitHigh" type="string"/>
+	<element name="PercentRatioLimitLow" type="string"/>
+	<element name="PercentRatioLimitType" type="string"/>
+	<element name="PercentRecovery" type="string"/>
+	<element name="PercentRecoveryLimitHigh" type="string"/>
+	<element name="PercentRecoveryLimitLow" type="string"/>
+	<element name="PercentRecoveryLimitType" type="string"/>
+	<element name="PercentRecoveryType" type="string"/>
+	<element name="PercentRSD" type="string"/>
+	<element name="PercentRSDLimitHigh" type="string"/>
+	<element name="PercentRSDLimitLow" type="string"/>
+	<element name="PercentRSDLimitType" type="string"/>
+	<element name="PhaseAnalyzed" type="string"/>
+	<element name="PreparationBatch" type="string"/>
+	<element name="PreparationPlusCleanupType" type="string"/>
+	<element name="PreparationType" type="string"/>
+	<element name="PreparedDate" type="string"/>
+	<element name="Preservative" type="string"/>
+	<element name="ProcedureID" type="string"/>
+	<element name="ProcedureName" type="string"/>
+	<element name="ProjectID" type="string"/>
+	<element name="ProjectName" type="string"/>
+	<element name="QCCategory" type="string"/>
+	<element name="QCLinkage" type="string"/>
+	<element name="QCType" type="string"/>
+	<element name="QuantitationBasis" type="string"/>
+	<element name="QuantitationLimit" type="string"/>
+	<element name="QuantitationLimitType" type="string"/>
+	<element name="QuantitationLimitUnits" type="string"/>
+	<element name="Quarantine" type="string"/>
+	<element name="ReferenceDate" type="string"/>
+	<element name="ReportingLimit" type="string"/>
+	<element name="ReportingLimitType" type="string"/>
+	<element name="ReportingLimitUnits" type="string"/>
+	<element name="Resolution" type="string"/>
+	<element name="ResolutionLimitHigh" type="string"/>
+	<element name="ResolutionLimitLow" type="string"/>
+	<element name="ResolutionLimitType" type="string"/>
+	<element name="ResolutionType" type="string"/>
+	<element name="ResolutionUnits" type="string"/>
+	<element name="Response" type="string"/>
+	<element name="ResponseLimitHigh" type="string"/>
+	<element name="ResponseLimitLow" type="string"/>
+	<element name="ResponseLimitType" type="string"/>
+	<element name="ResponseType" type="string"/>
+	<element name="ResponseUnits" type="string"/>
+	<element name="Result" type="string"/>
+	<element name="ResultBasis" type="string"/>
+	<element name="ResultLimitHigh" type="string"/>
+	<element name="ResultLimitLow" type="string"/>
+	<element name="ResultLimitType" type="string"/>
+	<element name="ResultType" type="string"/>
+	<element name="ResultUncertainty" type="string"/>
+	<element name="ResultUncertaintyConfidenceLevel" type="string"/>
+	<element name="ResultUncertaintyDetermination" type="string"/>
+	<element name="ResultUncertaintyIntervalType" type="string"/>
+	<element name="ResultUncertaintyLimitHigh" type="string"/>
+	<element name="ResultUncertaintyLimitLow" type="string"/>
+	<element name="ResultUncertaintyType" type="string"/>
+	<element name="ResultUncertaintyUnits" type="string"/>
+	<element name="ResultUnits" type="string"/>
+	<element name="RetentionTime" type="string"/>
+	<element name="RetentionTimeLimitHigh" type="string"/>
+	<element name="RetentionTimeLimitLow" type="string"/>
+	<element name="RetentionTimeLimitType" type="string"/>
+	<element name="RetentionTimeUnits" type="string"/>
+	<element name="RPD" type="string"/>
+	<element name="RPDLimitHigh" type="string"/>
+	<element name="RPDLimitType" type="string"/>
+	<element name="RPDType" type="string"/>
+	<element name="RRF" type="string"/>
+	<element name="RRFLimitLow" type="string"/>
+	<element name="RRFLimitType" type="string"/>
+	<element name="RunBatch" type="string"/>
+	<element name="SampleAmount" type="string"/>
+	<element name="SampleAmountUnits" type="string"/>
+	<element name="SamplingBatch" type="string"/>
+	<element name="ShippingBatch" type="string"/>
+	<element name="SiteID" type="string"/>
+	<element name="SiteName" type="string"/>
+	<element name="Solvent" type="string"/>
+	<element name="StandardConcentration" type="string"/>
+	<element name="StandardConcentrationUnits" type="string"/>
+	<element name="StandardDeviation" type="string"/>
+	<element name="StandardDeviationUnits" type="string"/>
+	<element name="StandardFinalAmount" type="string"/>
+	<element name="StandardFinalAmountUnits" type="string"/>
+	<element name="StandardID" type="string"/>
+	<element name="StandardSource" type="string"/>
+	<element name="StorageBatch" type="string"/>
+	<element name="TailingFactor" type="string"/>
+	<element name="TailingFactorLimitHigh" type="string"/>
+	<element name="TailingFactorLimitType" type="string"/>
+	<element name="Temperature" type="string"/>
+	<element name="TemperatureUnits" type="string"/>
+	<element name="Wavelength" type="string"/>
+	<element name="WavelengthUnits" type="string"/>
+	<element name="WeightingFactor" type="string"/>
+	<element name="Yield" type="string"/>
+</schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample file for Story WI-877 -->
+<!-- File includes two results (aluminum, calcium) for one specimen. -->
+<!DOCTYPE Header SYSTEM "..\..\..\main\resources\schemas\sedd\SEDD_5-2_GENERAL_3_2.dtd">
+<Header>
+	<LabID>ACME</LabID>
+	<LabName>ACME Testing Services</LabName>
+	<LabReportedDate>12122006T00:00:00</LabReportedDate>
+	<LabNarrative>The samples arrived in good condition, properly preserved and, where required, on ice.</LabNarrative>
+	<DateFormat>MMDDYYYYThh:mm:ss</DateFormat>
+	<Comment>Created by Max Butendeich as Sample file for a 'minimal version' of SEDD-based lab result import format</Comment>
+	<SamplePlusMethod>
+		<ClientSampleID>S01_SEDD</ClientSampleID>
+		<LabSampleID>LS0001</LabSampleID>
+		<CollectedDate>15012015T09:00:00</CollectedDate>
+		<MatrixID>WATER</MatrixID>
+		<LabReceiptDate>16012015T10:00:00</LabReceiptDate>
+		<LocationID></LocationID>
+		<LocationName></LocationName>
+		<QCType>Field_Sample</QCType>
+		<Analysis>
+			<ClientMethodID>3111-B</ClientMethodID>
+			<ClientMethodName>Metals in Water by FLAA- Direct Air-Acetylene Flame</ClientMethodName>
+			<ClientMethodSource>APHA</ClientMethodSource>
+			<LabAnalysisID>LS0001</LabAnalysisID>
+			<AnalyzedDate>16012015T11:00:00</AnalyzedDate>
+			<DilutionFactor>1.0</DilutionFactor>
+		</Analysis>
+		<ReportedResult>
+			<ClientAnalyteID>Aluminum (Concentration)</ClientAnalyteID>
+			<ClientAnalyteName>Aluminum (Concentration)</ClientAnalyteName>
+			<LabAnalysisID>LS0001</LabAnalysisID>
+			<Result>3.3</Result>
+			<ResultType>=</ResultType>
+			<ResultUnits>mg/L</ResultUnits>
+			<LabQualifiers>G</LabQualifiers>
+			<DetectionLimit>0.058</DetectionLimit>
+			<DetectionLimitType>MDL_sa</DetectionLimitType>
+			<DetectionLimitUnits>mg/L</DetectionLimitUnits>
+			<ReportingLimit>0.14</ReportingLimit>
+			<ReportingLimitType>MRL_sa</ReportingLimitType>
+			<ReportingLimitUnits>mg/L</ReportingLimitUnits>
+			<Comment>Sample Processed OK</Comment>
+		</ReportedResult>
+		<ReportedResult>
+			<ClientAnalyteID>Calcium (Concentration)</ClientAnalyteID>
+			<ClientAnalyteName>Calcium (Concentration)</ClientAnalyteName>
+			<LabAnalysisID>LS0001</LabAnalysisID>
+			<Result>2.9</Result>
+			<ResultType>=</ResultType>
+			<ResultUnits>mg/L</ResultUnits>
+			<LabQualifiers>x</LabQualifiers>
+			<DetectionLimit>0.050</DetectionLimit>
+			<DetectionLimitType>MDL_sa</DetectionLimitType>
+			<DetectionLimitUnits>mg/L</DetectionLimitUnits>
+			<ReportingLimit>0.15</ReportingLimit>
+			<ReportingLimitType>MRL_sa</ReportingLimitType>
+			<ReportingLimitUnits>mg/L</ReportingLimitUnits>
+			<Comment>Sample Processed OK</Comment>
+		</ReportedResult>
+	</SamplePlusMethod>
+</Header>

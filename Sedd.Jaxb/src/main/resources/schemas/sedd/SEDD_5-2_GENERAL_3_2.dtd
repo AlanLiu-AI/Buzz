@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SEDD_5-2_GENERAL_3_2.dtd 07/16/2008 -->
+<!-- Acronym Description -->
+<!-- Coeff - Coefficient -->
+<!-- EDD   - Electronic Data Deliverable -->
+<!-- ID    - Identity -->
+<!-- Lab   - Laboratory -->
+<!-- QC    - Quality Control -->
+<!-- RPD   - Relative Percent Difference -->
+<!-- RRF   - Relative Response Factor -->
+<!-- RSD   - Relative Standard Deviation -->
+<!ELEMENT Header (
+               ClientID|
+               ClientName|
+               Comment|
+               DateFormat|
+               EDDID|
+               EDDImplementationID|
+               EDDImplementationVersion|
+               EDDVersion|
+               GeneratingSystemID|
+               GeneratingSystemVersion|
+               LabContract|
+               LabContractModificationDescription|
+               LabContractModificationID|
+               LabDataPackageID|
+               LabDataPackageName|
+               LabDataPackageVersion|
+               LabID|
+               LabName|
+               LabNarrative|
+               LabQualifiersDefinition|
+               LabReportedDate|
+               ProjectID|
+               ProjectName|
+               SiteID|
+               SiteName|
+               ContactInformation|
+               SamplePlusMethod|
+               InstrumentQC
+                        )*>
+<!ELEMENT Analysis (
+               AliquotAmount|
+               AliquotAmountUnits|
+               AnalysisBatch|
+               AnalysisBatchEnd|
+               AnalysisDuration|
+               AnalysisDurationUnits|
+               AnalysisGroupID|
+               AnalysisType|
+               Analyst|
+               AnalyzedAmount|
+               AnalyzedAmountUnits|
+               AnalyzedDate|
+               BackgroundCorrection|
+               BackgroundRawData|
+               BackgroundType|
+               BottleID|
+               ClientAnalysisID|
+               ClientMethodCode|
+               ClientMethodID|
+               ClientMethodModificationDescription|
+               ClientMethodModificationID|
+               ClientMethodName|
+               ClientMethodSource|
+               ClientMethodVersion|
+               Column|
+               ColumnInternalDiameter|
+               ColumnInternalDiameterUnits|
+               ColumnLength|
+               ColumnLengthUnits|
+               Comment|
+               ConfirmationAnalysisID|
+               Counts|
+               CountsUncertainty|
+               CountsUncertaintyConfidenceLevel|
+               CountsUncertaintyDetermination|
+               CountsUncertaintyIntervalType|
+               CountsUncertaintyLimitHigh|
+               CountsUncertaintyLimitLow|
+               CountsUncertaintyType|
+               CountsUnits|
+               DetectorID|
+               DetectorType|
+               DilutionFactor|
+               Efficiency|
+               HeatedPurge|
+               Inclusion|
+               InjectionVolume|
+               InjectionVolumeUnits|
+               InstrumentID|
+               InterelementCorrection|
+               LabAnalysisID|
+               LabFileID|
+               LabID|
+               LabMethodID|
+               LabMethodName|
+               LabName|
+               MethodCode|
+               MethodID|
+               MethodModificationDescription|
+               MethodModificationID|
+               MethodName|
+               MethodSource|
+               MethodVersion|
+               OriginalLabAnalysisID|
+               PreparationBatch|
+               ProcedureID|
+               ProcedureName|
+               ReferenceDate|
+               ResultBasis|
+               RunBatch|
+               SampleAmount|
+               SampleAmountUnits|
+               Temperature|
+               TemperatureUnits|
+               Wavelength|
+               WavelengthUnits|
+               Yield|
+               PreparationPlusCleanup|
+               Analyte|
+               AnalyteGroup
+                         )*>
+<!ELEMENT AnalysisGroup (
+               AnalysisGroupID|
+               AnalysisType|
+               Comment|
+               Analyte|
+               AnalyteGroup
+                         )*>
+<!ELEMENT Analyte (
+               AmountAdded|
+               AmountAddedUnits|
+               AmountAddedLocation|
+               AnalyteGroupID|
+               AnalyteName|
+               AnalyteNameContext|
+               AnalyteType|
+               BiasErrorRatio|
+               CalibrationBasis|
+               CalibrationFactor|
+               CalibrationFactorUnits|
+               CalibrationType|
+               CASRegistryNumber|
+               ClientAnalyteID|
+               ClientAnalyteName|
+               Coeffa0|
+               Coeffa1|
+               Coeffa2|
+               Coeffa3|
+               CoeffOfDetermination|
+               CoeffOfDeterminationLimitLow|
+               CoeffOfDeterminationLimitType|
+               Comment|
+               CorrelationCoeff|
+               CorrelationCoeffLimitLow|
+               CorrelationCoeffLimitType|
+               Counts|
+               CountsUncertainty|
+               CountsUncertaintyConfidenceLevel|
+               CountsUncertaintyDetermination|
+               CountsUncertaintyIntervalType|
+               CountsUncertaintyLimitHigh|
+               CountsUncertaintyLimitLow|
+               CountsUncertaintyType|
+               CountsUnits|
+               DetectionLimit|
+               DetectionLimitType|
+               DetectionLimitUnits|
+               DifferenceErrorRatio|
+               Efficiency|
+               ExpectedResult|
+               ExpectedResultUncertainty|
+               ExpectedResultUncertaintyConfidenceLevel|
+               ExpectedResultUncertaintyDetermination|
+               ExpectedResultUncertaintyIntervalType|
+               ExpectedResultUncertaintyLimitHigh|
+               ExpectedResultUncertaintyLimitLow|
+               ExpectedResultUncertaintyType|
+               ExpectedResultUncertaintyUnits|
+               ExpectedResultUnits|
+               Inclusion|
+               IntermediateResult|
+               IntermediateResultLimitHigh|
+               IntermediateResultLimitLow|
+               IntermediateResultLimitType|
+               IntermediateResultUnits|
+               LabAnalyteID|
+               LabQualifiers|
+               LotNumber|
+               Mass|
+               MassLimitHigh|
+               MassLimitLow|
+               MassLimitType|
+               MassUnits|
+               MeanCalibrationFactor|
+               MeanCalibrationFactorUnits|
+               MeanRRF|
+               MeanRRFLimitLow|
+               MeanRRFLimitType|
+               PeakID|
+               PercentBreakdown|
+               PercentBreakdownLimitHigh|
+               PercentBreakdownLimitType|
+               PercentDifference|
+               PercentDifferenceLimitHigh|
+               PercentDifferenceLimitLow|
+               PercentDifferenceLimitType|
+               PercentMatch|
+               PercentRecovery|
+               PercentRecoveryLimitHigh|
+               PercentRecoveryLimitLow|
+               PercentRecoveryLimitType|
+               PercentRecoveryType|
+               PercentRSD|
+               PercentRSDLimitHigh|
+               PercentRSDLimitLow|
+               PercentRSDLimitType|
+               QuantitationBasis|
+               QuantitationLimit|
+               QuantitationLimitType|
+               QuantitationLimitUnits|
+               ReportingLimit|
+               ReportingLimitType|
+               ReportingLimitUnits|
+               Response|
+               ResponseLimitHigh|
+               ResponseLimitLow|
+               ResponseLimitType|
+               ResponseUnits|
+               Result|
+               ResultLimitHigh|
+               ResultLimitLow|
+               ResultLimitType|
+               ResultType|
+               ResultUncertainty|
+               ResultUncertaintyConfidenceLevel|
+               ResultUncertaintyDetermination|
+               ResultUncertaintyIntervalType|
+               ResultUncertaintyLimitHigh|
+               ResultUncertaintyLimitLow|
+               ResultUncertaintyType|
+               ResultUncertaintyUnits|
+               ResultUnits|
+               RPD|
+               RPDLimitHigh|
+               RPDLimitType|
+               RPDType|
+               RRF|
+               RRFLimitLow|
+               RRFLimitType|
+               StandardConcentration|
+               StandardConcentrationUnits|
+               StandardDeviation|
+               StandardDeviationUnits|
+               StandardFinalAmount|
+               StandardFinalAmountUnits|
+               StandardID|
+               StandardSource|
+               TailingFactor|
+               TailingFactorLimitHigh|
+               TailingFactorLimitType|
+               Wavelength|
+               WavelengthUnits|
+               WeightingFactor|
+               Peak
+                         )*>
+<!ELEMENT AnalyteComparison (
+               AnalyteName|
+               AnalyteNameContext|
+               CASRegistryNumber|
+               ClientAnalyteID|
+               ClientAnalyteName|
+               Comment|
+               CorrectionFactor|
+               LabAnalyteID
+                         )*>
+<!ELEMENT Characteristic (
+               CharacteristicType|
+               CharacteristicValue|
+               CharacteristicUnits|
+               Comment
+                         )*>
+<!ELEMENT AnalyteGroup (
+               AnalyteGroupID|
+               AnalyteName|
+               AnalyteNameContext|
+               AnalyteType|
+               CASRegistryNumber|
+               ClientAnalyteID|
+               ClientAnalyteName|
+               Comment|
+               LabAnalyteID|
+               LabQualifiers|
+               Result|
+               ResultType|
+               ResultUncertainty|
+               ResultUnits
+                         )*>
+<!ELEMENT ContactInformation (
+               LabAddress1|
+               LabAddress2|
+               LabCity|
+               LabCountry|
+               LabID|
+               LabName|
+               LabPointOfContact|
+               LabPointOfContactElectronicAddress|
+               LabPointOfContactTitle|
+               LabPointOfContactType|
+               LabState|
+               LabTelephoneNumber|
+               LabType|
+               LabZipCode
+                         )*>
+<!ELEMENT Handling (
+               Analyst|
+               BottleID|
+               ClientMethodCode|
+               ClientMethodID|
+               ClientMethodModificationDescription|
+               ClientMethodModificationID|
+               ClientMethodName|
+               ClientMethodSource|
+               ClientMethodVersion|
+               Comment|
+               HandledDate|
+               HandlingBatch|
+               HandlingType|
+               InitialAmount|
+               InitialAmountUnits|
+               LabID|
+               LabMethodID|
+               LabMethodName|
+               LabName|
+               MethodCode|
+               MethodID|
+               MethodModificationDescription|
+               MethodModificationID|
+               MethodName|
+               MethodSource|
+               MethodVersion|
+               ProcedureID|
+               ProcedureName|
+               SampleAmount|
+               SampleAmountUnits|
+               Characteristic
+                         )*>
+<!ELEMENT InstrumentQC (
+               ClientInstrumentQCType|
+               ClientMethodCode|
+               ClientMethodID|
+               ClientMethodModificationDescription|
+               ClientMethodModificationID|
+               ClientMethodName|
+               ClientMethodSource|
+               ClientMethodVersion|
+               Comment|
+               LabID|
+               LabInstrumentQCID|
+               LabMethodID|
+               LabMethodName|
+               LabName|
+               MethodCode|
+               MethodID|
+               MethodModificationDescription|
+               MethodModificationID|
+               MethodName|
+               MethodSource|
+               MethodVersion|
+               QCLinkage|
+               QCType|
+               AnalysisGroup|
+               Analysis
+                         )*>
+<!ELEMENT Peak (
+               CalibrationFactor|
+               CalibrationFactorUnits|
+               CalibrationType|
+               Coeffa0|
+               Coeffa1|
+               Coeffa2|
+               Coeffa3|
+               CoeffOfDetermination|
+               CoeffOfDeterminationLimitLow|
+               CoeffOfDeterminationLimitType|
+               Comment|
+               CorrelationCoeff|
+               CorrelationCoeffLimitLow|
+               CorrelationCoeffLimitType|
+               DetectionLimit|
+               DetectionLimitType|
+               DetectionLimitUnits|
+               DifferenceErrorRatio|
+               Efficiency|
+               Inclusion|
+               IntermediateResult|
+               IntermediateResultLimitHigh|
+               IntermediateResultLimitLow|
+               IntermediateResultLimitType|
+               IntermediateResultUnits|
+               LabQualifiers|
+               ManualIntegration|
+               Mass|
+               MassLimitHigh|
+               MassLimitLow|
+               MassLimitType|
+               MassUnits|
+               MeanCalibrationFactor|
+               MeanCalibrationFactorUnits|
+               MeanRetentionTime|
+               MeanRetentionTimeLimitHigh|
+               MeanRetentionTimeLimitLow|
+               MeanRetentionTimeLimitType|
+               MeanRetentionTimeUnits|
+               MeanRRF|
+               MeanRRFLimitLow|
+               MeanRRFLimitType|
+               PeakID|
+               PeakRatio|
+               PeakRatioLimitHigh|
+               PeakRatioLimitLow|
+               PeakRatioLimitType|
+               PercentDifference|
+               PercentDifferenceLimitHigh|
+               PercentDifferenceLimitLow|
+               PercentDifferenceLimitType|
+               PercentRatio|
+               PercentRatioLimitHigh|
+               PercentRatioLimitLow|
+               PercentRatioLimitType|
+               PercentRecovery|
+               PercentRecoveryLimitHigh|
+               PercentRecoveryLimitLow|
+               PercentRecoveryLimitType|
+               PercentRecoveryType|
+               PercentRSD|
+               PercentRSDLimitHigh|
+               PercentRSDLimitLow|
+               PercentRSDLimitType|
+               QuantitationLimit|
+               QuantitationLimitType|
+               QuantitationLimitUnits|
+               ReportingLimit|
+               ReportingLimitType|
+               ReportingLimitUnits|
+               Resolution|
+               ResolutionLimitHigh|
+               ResolutionLimitLow|
+               ResolutionLimitType|
+               ResolutionType|
+               ResolutionUnits|
+               Response|
+               ResponseLimitHigh|
+               ResponseLimitLow|
+               ResponseLimitType|
+               ResponseType|
+               ResponseUnits|
+               Result|
+               ResultLimitHigh|
+               ResultLimitLow|
+               ResultLimitType|
+               ResultType|
+               ResultUncertainty|
+               ResultUnits|
+               RetentionTime|
+               RetentionTimeLimitHigh|
+               RetentionTimeLimitLow|
+               RetentionTimeLimitType|
+               RetentionTimeUnits|
+               RRF|
+               RRFLimitLow|
+               RRFLimitType|
+               StandardDeviation|
+               StandardDeviationUnits|
+               Wavelength|
+               WavelengthUnits|
+               WeightingFactor|
+               AnalyteComparison|
+               PeakComparison|
+               PeakReplicate
+                         )*>
+<!ELEMENT PeakComparison (
+               AnalyteName|
+               AnalyteNameContext|
+               CASRegistryNumber|
+               ClientAnalyteID|
+               ClientAnalyteName|
+               Comment|
+               LabAnalyteID|
+               PeakID|
+               PeakRatio|
+               PeakRatioLimitHigh|
+               PeakRatioLimitLow|
+               PeakRatioLimitType|
+               PercentRatio|
+               PercentRatioLimitHigh|
+               PercentRatioLimitLow|
+               PercentRatioLimitType
+                         )*>
+<!ELEMENT PeakReplicate (
+               Comment|
+               IntermediateResult|
+               IntermediateResultLimitHigh|
+               IntermediateResultLimitLow|
+               IntermediateResultLimitType|
+               IntermediateResultUnits|
+               Mass|
+               MassLimitHigh|
+               MassLimitLow|
+               MassLimitType|
+               MassUnits|
+               PeakReplicateID|
+               Resolution|
+               ResolutionLimitHigh|
+               ResolutionLimitLow|
+               ResolutionLimitType|
+               ResolutionType|
+               ResolutionUnits|
+               Response|
+               ResponseLimitHigh|
+               ResponseLimitLow|
+               ResponseLimitType|
+               ResponseType|
+               ResponseUnits
+                         )*>
+<!ELEMENT PreparationPlusCleanup (
+               AliquotAmount|
+               AliquotAmountUnits|
+               Analyst|
+               BottleID|
+               CleanedUpDate|
+               CleanupBatch|
+               CleanupType|
+               ClientMethodCode|
+               ClientMethodID|
+               ClientMethodModificationDescription|
+               ClientMethodModificationID|
+               ClientMethodName|
+               ClientMethodSource|
+               ClientMethodVersion|
+               Comment|
+               Efficiency|
+               FinalAmount|
+               FinalAmountUnits|
+               InitialAmount|
+               InitialAmountUnits|
+               LabID|
+               LabMethodID|
+               LabMethodName|
+               LabName|
+               LotNumber|
+               MethodCode|
+               MethodID|
+               MethodModificationDescription|
+               MethodModificationID|
+               MethodName|
+               MethodSource|
+               MethodVersion|
+               PreparationBatch|
+               PreparationPlusCleanupType|
+               PreparationType|
+               PreparedDate|
+               ProcedureID|
+               ProcedureName|
+               SampleAmount|
+               SampleAmountUnits|
+               Solvent|
+               Characteristic
+                         )*>
+<!ELEMENT ReportedResult (
+               AnalysisGroupID|
+               AnalyteGroupID|
+               AnalyteName|
+               AnalyteNameContext|
+               AnalyteType|
+               BiasErrorRatio|
+               CASRegistryNumber|
+               ClientAnalyteID|
+               ClientAnalyteName|
+               ClientDetectionLimit|
+               ClientDetectionLimitUnits|
+               ClientQuantitationLimit|
+               ClientQuantitationLimitUnits|
+               Comment|
+               DetectionLimit|
+               DetectionLimitType|
+               DetectionLimitUnits|
+               DifferenceErrorRatio|
+               ExpectedResult|
+               ExpectedResultUncertainty|
+               ExpectedResultUncertaintyConfidenceLevel|
+               ExpectedResultUncertaintyDetermination|
+               ExpectedResultUncertaintyIntervalType|
+               ExpectedResultUncertaintyLimitHigh|
+               ExpectedResultUncertaintyLimitLow|
+               ExpectedResultUncertaintyType|
+               ExpectedResultUncertaintyUnits|
+               ExpectedResultUnits|
+               LabAnalysisID|
+               LabAnalyteID|
+               LabQualifiers|
+               LabResultStatus|
+               PeakID|
+               PercentDifference|
+               PercentDifferenceLimitHigh|
+               PercentDifferenceLimitLow|
+               PercentDifferenceLimitType|
+               PercentRecovery|
+               PercentRecoveryLimitHigh|
+               PercentRecoveryLimitLow|
+               PercentRecoveryLimitType|
+               PercentRecoveryType|
+               QuantitationLimit|
+               QuantitationLimitType|
+               QuantitationLimitUnits|
+               ReportingLimit|
+               ReportingLimitType|
+               ReportingLimitUnits|
+               Result|
+               ResultLimitHigh|
+               ResultLimitLow|
+               ResultLimitType|
+               ResultType|
+               ResultUncertainty|
+               ResultUncertaintyConfidenceLevel|
+               ResultUncertaintyDetermination|
+               ResultUncertaintyIntervalType|
+               ResultUncertaintyLimitHigh|
+               ResultUncertaintyLimitLow|
+               ResultUncertaintyType|
+               ResultUncertaintyUnits|
+               ResultUnits|
+               RetentionTime|
+               RetentionTimeUnits|
+               RPD|
+               RPDLimitHigh|
+               RPDLimitType|
+               RPDType
+                         )*>
+<!ELEMENT SamplePlusMethod (
+               Bottles|
+               BottleType|
+               ClientID|
+               ClientMethodCategory|
+               ClientMethodCode|
+               ClientMethodID|
+               ClientMethodModificationDescription|
+               ClientMethodModificationID|
+               ClientMethodName|
+               ClientMethodSource|
+               ClientMethodType|
+               ClientMethodVersion|
+               ClientName|
+               ClientSampleID|
+               CollectedDate|
+               CollectedEndDate|
+               Comment|
+               Composite|
+               CoolerID|
+               CustodyID|
+               EquipmentBatch|
+               Filtered|
+               LabContract|
+               LabContractModificationID|
+               LabContractModificationDescription|
+               LabID|
+               LabMethodID|
+               LabMethodName|
+               LabName|
+               LabReceiptDate|
+               LabReportingBatch|
+               LabSampleID|
+               LocationID|
+               LocationName|
+               MatrixID|
+               MatrixMedium|
+               MethodBatch|
+               MethodCategory|
+               MethodCode|
+               MethodID|
+               MethodLevel|
+               MethodModificationDescription|
+               MethodModificationID|
+               MethodName|
+               MethodSource|
+               MethodType|
+               MethodVersion|
+               OriginalClientSampleID|
+               OriginalLabSampleID|
+               PhaseAnalyzed|
+               Preservative|
+               ProjectID|
+               ProjectName|
+               QCCategory|
+               QCLinkage|
+               QCType|
+               Quarantine|
+               SamplingBatch|
+               ShippingBatch|
+               SiteID|
+               SiteName|
+               StorageBatch|
+               Analysis|
+               ReportedResult|
+               Handling|
+               AnalysisGroup|
+               Characteristic
+                         )*>
+
+<!ELEMENT AliquotAmount (#PCDATA)>
+<!ELEMENT AliquotAmountUnits (#PCDATA)>
+<!ELEMENT AmountAdded (#PCDATA)>
+<!ELEMENT AmountAddedUnits (#PCDATA)>
+<!ELEMENT AmountAddedLocation (#PCDATA)>
+<!ELEMENT AnalysisBatch (#PCDATA)>
+<!ELEMENT AnalysisBatchEnd (#PCDATA)>
+<!ELEMENT AnalysisDuration (#PCDATA)>
+<!ELEMENT AnalysisDurationUnits (#PCDATA)>
+<!ELEMENT AnalysisGroupID (#PCDATA)>
+<!ELEMENT AnalysisType (#PCDATA)>
+<!ELEMENT Analyst (#PCDATA)>
+<!ELEMENT AnalyteGroupID (#PCDATA)>
+<!ELEMENT AnalyteName (#PCDATA)>
+<!ELEMENT AnalyteNameContext (#PCDATA)>
+<!ELEMENT AnalyteType (#PCDATA)>
+<!ELEMENT AnalyzedAmount (#PCDATA)>
+<!ELEMENT AnalyzedAmountUnits (#PCDATA)>
+<!ELEMENT AnalyzedDate (#PCDATA)>
+<!ELEMENT BackgroundCorrection (#PCDATA)>
+<!ELEMENT BackgroundRawData (#PCDATA)>
+<!ELEMENT BackgroundType (#PCDATA)>
+<!ELEMENT BiasErrorRatio (#PCDATA)>
+<!ELEMENT Bottles (#PCDATA)>
+<!ELEMENT BottleID (#PCDATA)>
+<!ELEMENT BottleType (#PCDATA)>
+<!ELEMENT CalibrationBasis (#PCDATA)>
+<!ELEMENT CalibrationFactor (#PCDATA)>
+<!ELEMENT CalibrationFactorUnits (#PCDATA)>
+<!ELEMENT CalibrationType (#PCDATA)>
+<!ELEMENT CASRegistryNumber (#PCDATA)>
+<!ELEMENT CharacteristicType (#PCDATA)>
+<!ELEMENT CharacteristicValue (#PCDATA)>
+<!ELEMENT CharacteristicUnits (#PCDATA)>
+<!ELEMENT CleanedUpDate (#PCDATA)>
+<!ELEMENT CleanupBatch (#PCDATA)>
+<!ELEMENT CleanupType (#PCDATA)>
+<!ELEMENT ClientAnalysisID (#PCDATA)>
+<!ELEMENT ClientAnalyteID (#PCDATA)>
+<!ELEMENT ClientAnalyteName (#PCDATA)>
+<!ELEMENT ClientDetectionLimit (#PCDATA)>
+<!ELEMENT ClientDetectionLimitUnits (#PCDATA)>
+<!ELEMENT ClientID (#PCDATA)>
+<!ELEMENT ClientInstrumentQCType (#PCDATA)>
+<!ELEMENT ClientMethodCategory (#PCDATA)>
+<!ELEMENT ClientMethodCode (#PCDATA)>
+<!ELEMENT ClientMethodID (#PCDATA)>
+<!ELEMENT ClientMethodModificationDescription (#PCDATA)>
+<!ELEMENT ClientMethodModificationID (#PCDATA)>
+<!ELEMENT ClientMethodName (#PCDATA)>
+<!ELEMENT ClientMethodSource (#PCDATA)>
+<!ELEMENT ClientMethodType (#PCDATA)>
+<!ELEMENT ClientMethodVersion (#PCDATA)>
+<!ELEMENT ClientName (#PCDATA)>
+<!ELEMENT ClientQuantitationLimit (#PCDATA)>
+<!ELEMENT ClientQuantitationLimitUnits (#PCDATA)>
+<!ELEMENT ClientSampleID (#PCDATA)>
+<!ELEMENT Coeffa0 (#PCDATA)>
+<!ELEMENT Coeffa1 (#PCDATA)>
+<!ELEMENT Coeffa2 (#PCDATA)>
+<!ELEMENT Coeffa3 (#PCDATA)>
+<!ELEMENT CoeffOfDetermination (#PCDATA)>
+<!ELEMENT CoeffOfDeterminationLimitLow (#PCDATA)>
+<!ELEMENT CoeffOfDeterminationLimitType (#PCDATA)>
+<!ELEMENT CollectedDate (#PCDATA)>
+<!ELEMENT CollectedEndDate (#PCDATA)>
+<!ELEMENT Column (#PCDATA)>
+<!ELEMENT ColumnInternalDiameter (#PCDATA)>
+<!ELEMENT ColumnInternalDiameterUnits (#PCDATA)>
+<!ELEMENT ColumnLength (#PCDATA)>
+<!ELEMENT ColumnLengthUnits (#PCDATA)>
+<!ELEMENT Comment (#PCDATA)>
+<!ELEMENT Composite (#PCDATA)>
+<!ELEMENT ConfirmationAnalysisID (#PCDATA)>
+<!ELEMENT CoolerID (#PCDATA)>
+<!ELEMENT CorrectionFactor (#PCDATA)>
+<!ELEMENT CorrelationCoeff (#PCDATA)>
+<!ELEMENT CorrelationCoeffLimitLow (#PCDATA)>
+<!ELEMENT CorrelationCoeffLimitType (#PCDATA)>
+<!ELEMENT Counts (#PCDATA)>
+<!ELEMENT CountsUncertainty (#PCDATA)>
+<!ELEMENT CountsUncertaintyConfidenceLevel (#PCDATA)>
+<!ELEMENT CountsUncertaintyDetermination (#PCDATA)>
+<!ELEMENT CountsUncertaintyIntervalType (#PCDATA)>
+<!ELEMENT CountsUncertaintyLimitHigh (#PCDATA)>
+<!ELEMENT CountsUncertaintyLimitLow (#PCDATA)>
+<!ELEMENT CountsUncertaintyType (#PCDATA)>
+<!ELEMENT CountsUnits (#PCDATA)>
+<!ELEMENT CustodyID (#PCDATA)>
+<!ELEMENT DateFormat (#PCDATA)>
+<!ELEMENT DetectionLimit (#PCDATA)>
+<!ELEMENT DetectionLimitType (#PCDATA)>
+<!ELEMENT DetectionLimitUnits (#PCDATA)>
+<!ELEMENT DetectorID (#PCDATA)>
+<!ELEMENT DetectorType (#PCDATA)>
+<!ELEMENT DifferenceErrorRatio (#PCDATA)>
+<!ELEMENT DilutionFactor (#PCDATA)>
+<!ELEMENT EDDID (#PCDATA)>
+<!ELEMENT EDDImplementationID (#PCDATA)>
+<!ELEMENT EDDImplementationVersion (#PCDATA)>
+<!ELEMENT EDDVersion (#PCDATA)>
+<!ELEMENT Efficiency (#PCDATA)>
+<!ELEMENT EquipmentBatch (#PCDATA)>
+<!ELEMENT ExpectedResult (#PCDATA)>
+<!ELEMENT ExpectedResultUncertainty (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyConfidenceLevel (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyDetermination (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyIntervalType (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyLimitHigh (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyLimitLow (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyType (#PCDATA)>
+<!ELEMENT ExpectedResultUncertaintyUnits (#PCDATA)>
+<!ELEMENT ExpectedResultUnits (#PCDATA)>
+<!ELEMENT Filtered (#PCDATA)>
+<!ELEMENT FinalAmount (#PCDATA)>
+<!ELEMENT FinalAmountUnits (#PCDATA)>
+<!ELEMENT GeneratingSystemID (#PCDATA)>
+<!ELEMENT GeneratingSystemVersion (#PCDATA)>
+<!ELEMENT HandledDate (#PCDATA)>
+<!ELEMENT HandlingBatch (#PCDATA)>
+<!ELEMENT HandlingType (#PCDATA)>
+<!ELEMENT HeatedPurge (#PCDATA)>
+<!ELEMENT Inclusion (#PCDATA)>
+<!ELEMENT InitialAmount (#PCDATA)>
+<!ELEMENT InitialAmountUnits (#PCDATA)>
+<!ELEMENT InjectionVolume (#PCDATA)>
+<!ELEMENT InjectionVolumeUnits (#PCDATA)>
+<!ELEMENT InstrumentID (#PCDATA)>
+<!ELEMENT InterelementCorrection (#PCDATA)>
+<!ELEMENT IntermediateResult (#PCDATA)>
+<!ELEMENT IntermediateResultLimitHigh (#PCDATA)>
+<!ELEMENT IntermediateResultLimitLow (#PCDATA)>
+<!ELEMENT IntermediateResultLimitType (#PCDATA)>
+<!ELEMENT IntermediateResultUnits (#PCDATA)>
+<!ELEMENT LabAddress1 (#PCDATA)>
+<!ELEMENT LabAddress2 (#PCDATA)>
+<!ELEMENT LabAnalysisID (#PCDATA)>
+<!ELEMENT LabAnalyteID (#PCDATA)>
+<!ELEMENT LabCity (#PCDATA)>
+<!ELEMENT LabContract (#PCDATA)>
+<!ELEMENT LabContractModificationDescription (#PCDATA)>
+<!ELEMENT LabContractModificationID (#PCDATA)>
+<!ELEMENT LabCountry (#PCDATA)>
+<!ELEMENT LabDataPackageID (#PCDATA)>
+<!ELEMENT LabDataPackageName (#PCDATA)>
+<!ELEMENT LabDataPackageVersion (#PCDATA)>
+<!ELEMENT LabFileID (#PCDATA)>
+<!ELEMENT LabID (#PCDATA)>
+<!ELEMENT LabInstrumentQCID (#PCDATA)>
+<!ELEMENT LabMethodID (#PCDATA)>
+<!ELEMENT LabMethodName (#PCDATA)>
+<!ELEMENT LabName (#PCDATA)>
+<!ELEMENT LabNarrative (#PCDATA)>
+<!ELEMENT LabPointOfContact (#PCDATA)>
+<!ELEMENT LabPointOfContactElectronicAddress (#PCDATA)>
+<!ELEMENT LabPointOfContactTitle (#PCDATA)>
+<!ELEMENT LabPointOfContactType (#PCDATA)>
+<!ELEMENT LabQualifiers (#PCDATA)>
+<!ELEMENT LabQualifiersDefinition (#PCDATA)>
+<!ELEMENT LabReceiptDate (#PCDATA)>
+<!ELEMENT LabReportedDate (#PCDATA)>
+<!ELEMENT LabReportingBatch (#PCDATA)>
+<!ELEMENT LabResultStatus (#PCDATA)>
+<!ELEMENT LabSampleID (#PCDATA)>
+<!ELEMENT LabState (#PCDATA)>
+<!ELEMENT LabTelephoneNumber (#PCDATA)>
+<!ELEMENT LabType (#PCDATA)>
+<!ELEMENT LabZipCode (#PCDATA)>
+<!ELEMENT LocationID (#PCDATA)>
+<!ELEMENT LocationName (#PCDATA)>
+<!ELEMENT LotNumber (#PCDATA)>
+<!ELEMENT ManualIntegration (#PCDATA)>
+<!ELEMENT Mass (#PCDATA)>
+<!ELEMENT MassLimitHigh (#PCDATA)>
+<!ELEMENT MassLimitLow (#PCDATA)>
+<!ELEMENT MassLimitType (#PCDATA)>
+<!ELEMENT MassUnits (#PCDATA)>
+<!ELEMENT MatrixID (#PCDATA)>
+<!ELEMENT MatrixMedium (#PCDATA)>
+<!ELEMENT MeanCalibrationFactor (#PCDATA)>
+<!ELEMENT MeanCalibrationFactorUnits (#PCDATA)>
+<!ELEMENT MeanRetentionTime (#PCDATA)>
+<!ELEMENT MeanRetentionTimeLimitHigh (#PCDATA)>
+<!ELEMENT MeanRetentionTimeLimitLow (#PCDATA)>
+<!ELEMENT MeanRetentionTimeLimitType (#PCDATA)>
+<!ELEMENT MeanRetentionTimeUnits (#PCDATA)>
+<!ELEMENT MeanRRF (#PCDATA)>
+<!ELEMENT MeanRRFLimitLow (#PCDATA)>
+<!ELEMENT MeanRRFLimitType (#PCDATA)>
+<!ELEMENT MethodBatch (#PCDATA)>
+<!ELEMENT MethodCategory (#PCDATA)>
+<!ELEMENT MethodCode (#PCDATA)>
+<!ELEMENT MethodID (#PCDATA)>
+<!ELEMENT MethodLevel (#PCDATA)>
+<!ELEMENT MethodModificationDescription (#PCDATA)>
+<!ELEMENT MethodModificationID (#PCDATA)>
+<!ELEMENT MethodName (#PCDATA)>
+<!ELEMENT MethodSource (#PCDATA)>
+<!ELEMENT MethodType (#PCDATA)>
+<!ELEMENT MethodVersion (#PCDATA)>
+<!ELEMENT OriginalClientSampleID (#PCDATA)>
+<!ELEMENT OriginalLabAnalysisID (#PCDATA)>
+<!ELEMENT OriginalLabSampleID (#PCDATA)>
+<!ELEMENT PeakID (#PCDATA)>
+<!ELEMENT PeakReplicateID (#PCDATA)>
+<!ELEMENT PeakRatio (#PCDATA)>
+<!ELEMENT PeakRatioLimitHigh (#PCDATA)>
+<!ELEMENT PeakRatioLimitLow (#PCDATA)>
+<!ELEMENT PeakRatioLimitType (#PCDATA)>
+<!ELEMENT PercentBreakdown (#PCDATA)>
+<!ELEMENT PercentBreakdownLimitHigh (#PCDATA)>
+<!ELEMENT PercentBreakdownLimitType (#PCDATA)>
+<!ELEMENT PercentDifference (#PCDATA)>
+<!ELEMENT PercentDifferenceLimitHigh (#PCDATA)>
+<!ELEMENT PercentDifferenceLimitLow (#PCDATA)>
+<!ELEMENT PercentDifferenceLimitType (#PCDATA)>
+<!ELEMENT PercentMatch (#PCDATA)>
+<!ELEMENT PercentRatio (#PCDATA)>
+<!ELEMENT PercentRatioLimitHigh (#PCDATA)>
+<!ELEMENT PercentRatioLimitLow (#PCDATA)>
+<!ELEMENT PercentRatioLimitType (#PCDATA)>
+<!ELEMENT PercentRecovery (#PCDATA)>
+<!ELEMENT PercentRecoveryLimitHigh (#PCDATA)>
+<!ELEMENT PercentRecoveryLimitLow (#PCDATA)>
+<!ELEMENT PercentRecoveryLimitType (#PCDATA)>
+<!ELEMENT PercentRecoveryType (#PCDATA)>
+<!ELEMENT PercentRSD (#PCDATA)>
+<!ELEMENT PercentRSDLimitHigh (#PCDATA)>
+<!ELEMENT PercentRSDLimitLow (#PCDATA)>
+<!ELEMENT PercentRSDLimitType (#PCDATA)>
+<!ELEMENT PhaseAnalyzed (#PCDATA)>
+<!ELEMENT PreparationBatch (#PCDATA)>
+<!ELEMENT PreparationPlusCleanupType (#PCDATA)>
+<!ELEMENT PreparationType (#PCDATA)>
+<!ELEMENT PreparedDate (#PCDATA)>
+<!ELEMENT Preservative (#PCDATA)>
+<!ELEMENT ProcedureID (#PCDATA)>
+<!ELEMENT ProcedureName (#PCDATA)>
+<!ELEMENT ProjectID (#PCDATA)>
+<!ELEMENT ProjectName (#PCDATA)>
+<!ELEMENT QCCategory (#PCDATA)>
+<!ELEMENT QCLinkage (#PCDATA)>
+<!ELEMENT QCType (#PCDATA)>
+<!ELEMENT QuantitationBasis (#PCDATA)>
+<!ELEMENT QuantitationLimit (#PCDATA)>
+<!ELEMENT QuantitationLimitType (#PCDATA)>
+<!ELEMENT QuantitationLimitUnits (#PCDATA)>
+<!ELEMENT Quarantine (#PCDATA)>
+<!ELEMENT ReferenceDate (#PCDATA)>
+<!ELEMENT ReportingLimit (#PCDATA)>
+<!ELEMENT ReportingLimitType (#PCDATA)>
+<!ELEMENT ReportingLimitUnits (#PCDATA)>
+<!ELEMENT Resolution (#PCDATA)>
+<!ELEMENT ResolutionLimitHigh (#PCDATA)>
+<!ELEMENT ResolutionLimitLow (#PCDATA)>
+<!ELEMENT ResolutionLimitType (#PCDATA)>
+<!ELEMENT ResolutionType (#PCDATA)>
+<!ELEMENT ResolutionUnits (#PCDATA)>
+<!ELEMENT Response (#PCDATA)>
+<!ELEMENT ResponseLimitHigh (#PCDATA)>
+<!ELEMENT ResponseLimitLow (#PCDATA)>
+<!ELEMENT ResponseLimitType (#PCDATA)>
+<!ELEMENT ResponseType (#PCDATA)>
+<!ELEMENT ResponseUnits (#PCDATA)>
+<!ELEMENT Result (#PCDATA)>
+<!ELEMENT ResultBasis (#PCDATA)>
+<!ELEMENT ResultLimitHigh (#PCDATA)>
+<!ELEMENT ResultLimitLow (#PCDATA)>
+<!ELEMENT ResultLimitType (#PCDATA)>
+<!ELEMENT ResultType (#PCDATA)>
+<!ELEMENT ResultUncertainty (#PCDATA)>
+<!ELEMENT ResultUncertaintyConfidenceLevel (#PCDATA)>
+<!ELEMENT ResultUncertaintyDetermination (#PCDATA)>
+<!ELEMENT ResultUncertaintyIntervalType (#PCDATA)>
+<!ELEMENT ResultUncertaintyLimitHigh (#PCDATA)>
+<!ELEMENT ResultUncertaintyLimitLow (#PCDATA)>
+<!ELEMENT ResultUncertaintyType (#PCDATA)>
+<!ELEMENT ResultUncertaintyUnits (#PCDATA)>
+<!ELEMENT ResultUnits (#PCDATA)>
+<!ELEMENT RetentionTime (#PCDATA)>
+<!ELEMENT RetentionTimeLimitHigh (#PCDATA)>
+<!ELEMENT RetentionTimeLimitLow (#PCDATA)>
+<!ELEMENT RetentionTimeLimitType (#PCDATA)>
+<!ELEMENT RetentionTimeUnits (#PCDATA)>
+<!ELEMENT RPD (#PCDATA)>
+<!ELEMENT RPDLimitHigh (#PCDATA)>
+<!ELEMENT RPDLimitType (#PCDATA)>
+<!ELEMENT RPDType (#PCDATA)>
+<!ELEMENT RRF (#PCDATA)>
+<!ELEMENT RRFLimitLow (#PCDATA)>
+<!ELEMENT RRFLimitType (#PCDATA)>
+<!ELEMENT RunBatch (#PCDATA)>
+<!ELEMENT SampleAmount (#PCDATA)>
+<!ELEMENT SampleAmountUnits (#PCDATA)>
+<!ELEMENT SamplingBatch (#PCDATA)>
+<!ELEMENT ShippingBatch (#PCDATA)>
+<!ELEMENT SiteID (#PCDATA)>
+<!ELEMENT SiteName (#PCDATA)>
+<!ELEMENT Solvent (#PCDATA)>
+<!ELEMENT StandardConcentration (#PCDATA)>
+<!ELEMENT StandardConcentrationUnits (#PCDATA)>
+<!ELEMENT StandardDeviation (#PCDATA)>
+<!ELEMENT StandardDeviationUnits (#PCDATA)>
+<!ELEMENT StandardFinalAmount (#PCDATA)>
+<!ELEMENT StandardFinalAmountUnits (#PCDATA)>
+<!ELEMENT StandardID (#PCDATA)>
+<!ELEMENT StandardSource (#PCDATA)>
+<!ELEMENT StorageBatch (#PCDATA)>
+<!ELEMENT TailingFactor (#PCDATA)>
+<!ELEMENT TailingFactorLimitHigh (#PCDATA)>
+<!ELEMENT TailingFactorLimitType (#PCDATA)>
+<!ELEMENT Temperature (#PCDATA)>
+<!ELEMENT TemperatureUnits (#PCDATA)>
+<!ELEMENT Wavelength (#PCDATA)>
+<!ELEMENT WavelengthUnits (#PCDATA)>
+<!ELEMENT WeightingFactor (#PCDATA)>
+<!ELEMENT Yield (#PCDATA)>

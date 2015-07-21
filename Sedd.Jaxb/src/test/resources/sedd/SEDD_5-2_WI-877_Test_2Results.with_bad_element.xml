@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample file for Story WI-877 -->
+<!-- File includes two results (aluminum, calcium) for one specimen. -->
+<!DOCTYPE Header SYSTEM "..\..\..\..\..\..\Marshallings\src\main\resources\schemas\sedd\SEDD_5-2_GENERAL_3_2.dtd">
+<Header>
+	<LabID>ACME</LabID>
+	<LabNome>ACME Testing Services</LabNome>
+	<LabReportedDate>12122006T00:00:00</LabReportedDate>
+	<LabNarrative>The samples arrived in good condition, properly preserved and, where required, on ice.</LabNarrative>
+	<DateFormat>MMDDYYYYThh:mm:ss</DateFormat>
+	<Comment>Created by Max Butendeich as Sample file for a 'minimal version' of SEDD-based lab result import format</Comment>
+</Header>
