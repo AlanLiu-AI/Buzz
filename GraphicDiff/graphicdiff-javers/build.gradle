@@ -1,0 +1,14 @@
+apply plugin: 'application'
+mainClassName = "buzz.graphicdiff.javers.examples.SimpleDiff"
+
+dependencies {
+    compile 'joda-time:joda-time:2.3'
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'com.google.guava:guava:18.0'
+    compile 'gaia:Gaia.Model:2016.2.930'
+    compile 'gaia:Gaia.Model:2016.2.930:tests'
+    compile 'org.javers:javers-core:1.6.4'
+
+    testCompile 'org.codehaus.gpars:gpars:1.2.1'
+}
+

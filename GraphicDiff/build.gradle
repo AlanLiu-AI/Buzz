@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://repo.spring.io/plugins-release' }
+        maven { url 'https://nexus.gaiaserve.net/nexus/content/repositories/releases/' }
+    }
+
+    dependencies {
+        classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.7'
+    }
+}
+
+apply plugin: 'java'
+
+configurations {
+    testArtifacts.extendsFrom testRuntime
+}
+
+task testJar(type: Jar) {
+    classifier "test"
+    from sourceSets.test.output
+}
+
+artifacts {
+    testArtifacts testJar
+}
+
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'propdeps'
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    project.group = 'buzz.graphicdiff'
+    project.version = '0.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://nexus.gaiaserve.net/nexus/content/repositories/releases/' }
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.11'
+    }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '2.9'
+    }
+}
+

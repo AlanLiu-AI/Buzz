@@ -1,0 +1,16 @@
+# IDE
+.idea
+*.iml
+
+# Maven
+target
+
+# gradle config
+.gradle
+
+# project binaries
+build
+out
+classes
+
+/libs/
