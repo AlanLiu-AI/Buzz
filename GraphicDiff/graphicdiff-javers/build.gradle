@@ -1,5 +1,5 @@
 apply plugin: 'application'
-mainClassName = "buzz.graphicdiff.javers.examples.SimpleDiff"
+mainClassName = "buzz.graphicdiff.javers.examples.ObservationDiff"
 
 dependencies {
     compile 'joda-time:joda-time:2.3'

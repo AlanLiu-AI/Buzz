@@ -25,14 +25,16 @@ artifacts {
     testArtifacts testJar
 }
 
+println System.getProperty("java.home")
+
 subprojects {
     apply plugin: 'maven'
     apply plugin: 'java'
     apply plugin: 'groovy'
     apply plugin: 'propdeps'
 
-    sourceCompatibility = 1.7
-    targetCompatibility = 1.7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 
     project.group = 'buzz.graphicdiff'
     project.version = '0.0-SNAPSHOT'
