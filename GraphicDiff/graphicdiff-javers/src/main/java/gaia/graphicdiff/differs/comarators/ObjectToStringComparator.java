@@ -1,11 +1,11 @@
-package buzz.graphicdiff.javers.examples;
+package gaia.graphicdiff.differs.comarators;
 
 import org.javers.core.diff.changetype.ValueChange;
 import org.javers.core.diff.custom.CustomPropertyComparator;
 import org.javers.core.metamodel.object.GlobalId;
 import org.javers.core.metamodel.property.Property;
 
-public class ObjectEqualsComparator<T>
+public class ObjectToStringComparator<T>
     implements CustomPropertyComparator<T, ValueChange> {
 
     @Override

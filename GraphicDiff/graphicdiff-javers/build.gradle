@@ -1,5 +1,13 @@
 apply plugin: 'application'
-mainClassName = "buzz.graphicdiff.javers.examples.ObservationDiff"
+mainClassName = "gaia.graphicdiff.examples.Main"
+run {
+    /* Can pass all the properties: */
+    systemProperties System.getProperties()
+
+    /* Or just each by name: */
+    systemProperty "multiThreads", System.getProperty("multiThreads")
+    systemProperty "callPerThread", System.getProperty("callPerThread")
+}
 
 dependencies {
     compile 'joda-time:joda-time:2.3'
@@ -7,7 +15,9 @@ dependencies {
     compile 'com.google.guava:guava:18.0'
     compile 'gaia:Gaia.Model:2016.2.930'
     compile 'gaia:Gaia.Model:2016.2.930:tests'
+    compile 'org.apache.commons:commons-lang3:3.4'
     compile 'org.javers:javers-core:1.6.4'
+    compile 'org.projectlombok:lombok:1.16.8'
 
     testCompile 'org.codehaus.gpars:gpars:1.2.1'
 }

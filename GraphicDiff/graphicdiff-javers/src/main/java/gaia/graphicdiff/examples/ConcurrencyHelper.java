@@ -1,7 +1,9 @@
-package buzz.graphicdiff.javers.examples;
+package gaia.graphicdiff.examples;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.joda.time.Instant;
 
 public abstract class ConcurrencyHelper {
 
@@ -12,6 +14,7 @@ public abstract class ConcurrencyHelper {
                 threads.add(new Thread(task));
             }
 
+            Instant startTime = Instant.now();
             for (int index = 0; index < numberOfThreads; index++) {
                 threads.get(index).start();
             }
@@ -26,7 +29,9 @@ public abstract class ConcurrencyHelper {
                     }
                 }
             }
-            System.out.println("ConcurrencyHelper execute done with " + numberOfThreads + " threads.");
+            long duration = Instant.now().getMillis() - startTime.getMillis();
+            System.out.println(String.format("ConcurrencyHelper execute done with %s threads, duration %d ms.",
+                    numberOfThreads, duration));
         } catch (Exception cause) {
             cause.printStackTrace(System.err);
         }
