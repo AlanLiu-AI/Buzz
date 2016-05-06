@@ -1,5 +1,7 @@
 package gaia.graphicdiff.differs.comarators;
 
+import java.lang.reflect.Field;
+
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.javers.core.diff.changetype.ValueChange;
 import org.javers.core.diff.custom.CustomPropertyComparator;
@@ -9,10 +11,14 @@ import org.javers.core.metamodel.property.Property;
 public class SinglePropertyToStringComparator<T>
     implements CustomPropertyComparator<T, ValueChange> {
 
-    private final String fieldName;
+    private final Field field;
 
-    public SinglePropertyToStringComparator(String fieldName) {
-        this.fieldName = fieldName;
+    protected SinglePropertyToStringComparator(Class<T> type, String fieldName) {
+        this.field = FieldUtils.getField(type, fieldName, true);
+    }
+
+    public static <T> SinglePropertyToStringComparator<T> createComparator(Class<T> type, String fieldName) {
+        return new SinglePropertyToStringComparator<>(type, fieldName);
     }
 
     @Override
@@ -31,7 +37,7 @@ public class SinglePropertyToStringComparator<T>
         String value = "";
         if (domainObject != null) {
             try {
-                Object fieldValue = FieldUtils.readField(domainObject, fieldName, true);
+                Object fieldValue = FieldUtils.readField(field, domainObject);
                 if (fieldValue != null) {
                     return fieldValue.toString();
                 }
