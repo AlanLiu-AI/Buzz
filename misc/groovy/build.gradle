@@ -1,0 +1,15 @@
+apply plugin: 'application'
+mainClassName = "buzz.misc.groovy.examples.Main"
+run {
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.6'
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'com.google.guava:guava:18.0'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.projectlombok:lombok:1.16.8'
+
+    testCompile 'org.codehaus.gpars:gpars:1.2.1'
+}
+
